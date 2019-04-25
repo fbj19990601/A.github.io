@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{#WebTitle#}</title>
+<link href="/zone_b2b/templates/enterprise/style2/two_layout.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/zone_b2b/js/mobandh.js"></script>
+<script type="text/javascript" src="/js/prototype.js"></script>
+</head>
+
+<body class="bg">
+<!--头部1-->
+<div class="moban_top" align="center">
+<div class="moban_top_div">
+<div class="moban_top_left"> <a href="javascript:window.external.AddFavorite( top.location.href )">Favorites of the Company</a>  |  <a href=# onClick="this.style.behavior='url(#default#homepage)';var strUrl = top.location.href;this.setHomePage( strUrl );">Set homepage</a> </div>
+<div class="moban_top_right"><img src="/zone_b2b/templates/enterprise/style2/images/max.gif" align="absbottom"/>&nbsp;<a href="/index.jsp">Sign Business Room</a> | <a href="/mainMenu/default.jsp">Publish product information</a> | <a href="/service/vip.html">DiamondMax Member</a>
+</div>
+</div>
+<!--头部2-->
+<div class="moban_head">
+ <div class="moban_head_left">
+ 	&nbsp;
+ </div>
+<div class="moban_head_right">
+            <div class="moban_head_right_zi">&nbsp;</div>
+        </div>
+</div>
+<!--导航-->
+<div class="moban-dh">
+<table width="96%" border="0" cellpadding="0" cellspacing="0"  align="center">
+  <tr><td align="center" class=dh id="top_dh0"><a href="index.htm">Company Introduction</a></td>
+<td align="center" class=dh id="top_dh1"><a href="supply.htm">Latest Supply</a></td>
+<td align="center" class=dh id="top_dh2" style="display:none"><a href="credit.htm">资质荣誉</a></td>
+<td align="center" class=dh id="top_dh3"><a href="stock.htm">Company Procurement</a></td>
+<td align="center" class=dhse id="top_dh4"><a href="active.htm">Company Dynamic</a></td>
+<td align="center" class=dh id="top_dh5" style="display:none"><a href="bidding.htm">公司招标</a></td>
+<td align="center" class=dh id="top_dh6" style="display:none"><a href="techo.htm">公司技术</a></td>
+<td align="center" class=dh id="top_dh7"><a href="product.htm">Company Products</a></td>
+<td align="center" class=dh id="top_dh8" style="display:none"><a href="resume.htm">招聘中心</a></td>
+<td align="center" class=dh id="top_dh9" style="display:none"><a href="leavel.htm">客户留言</a></td></tr></table>
+</div>
+<!--banner条-->
+<div class="moban-banner">
+<div class="moban-banner-zi">
+{#cust:name#}</div>
+</div>
+<div class="moban-width">
+
+<!--左边-->
+<div class="moban-left" align="center">
+<!--栏目条1-->
+<div class="moban-left-lmt">
+<div class="moban-left-lmt1">Contact way</div>
+<div class="moban-left-lmt2">&nbsp;</div>
+</div>
+<div class="moban-left-zi">
+Legal representative:{#juristic#}<br>			 
+E-mail:{#mail#}<br>
+Tel:{#telephone#}<br>
+Fax:{#fax#}<br>
+Address:{#address#}<br>
+Zip:{#postcode#}<br>
+Web site address:{#website#}</div>
+
+<!--栏目条2-->
+<div class="moban-left-lmt">
+<div class="moban-left-lmt1">Links</div>
+<div class="moban-left-lmt2">&nbsp;</div>
+</div>
+<!--内容2-->
+<div class="moban-leftlist">
+<div class="moban-left-list">
+	{#linker#}
+</div>
+</div>
+</div>
+
+<!--右边-->
+<div class="moban-right">
+<!--公司简介-->
+<div class="moban-right-lmt">
+ <div class="moban-right-lmt1">Company Profile</div>
+ <div class="moban-right-lmt2">&nbsp;</div>
+</div>
+<div class="cswidth">
+ <div class="moban-right-01"><img src="{#company_logo#}" width="140" height="130" /></div>
+ <div class="moban-right-02">{#cust:scope#}</div>
+</div>
+
+</div>
+
+<!--公司产品-->
+<div class="moban-right">
+<!--栏目条1-->
+<div class="moban-right-lmt">
+	<div class="moban-right-lmt1">Company Products</div>
+	<div class="moban-right-lmt2"><a href="/zone_b2b/enterprise/moreProduct.jsp?cust_id={#cust_id#}" name= "mapId" target="blank">more>></a></div>
+</div>
+<div class="cswidth">
+     <div class="moban-right-cplist">
+    			<div><a href="{#pic:link-1#}"><img src="{#prod:pict-1#}" width="118" height="115" border="0"></a></div>
+				  <div><a href="{#pic:link-1#}">{#prod:title-1#}</a></div>
+		 </div>
+			  
+     <div class="moban-right-cplist">
+      		<div><a href="{#pic:link-1#}"><img src="{#prod:pict-2#}" width="118" height="115" border="0"></a></div>
+				  <div><a href="{#pic:link-2#}">{#prod:title-2#}</a></div>
+		 </div>
+				  
+     <div class="moban-right-cplist">
+     			<div><a href="{#pic:link-1#}"><img src="{#prod:pict-3#}" width="118" height="115" border="0"></a></div>
+				  <div><a href="{#pic:link-3#}">{#prod:title-3#}</a></div>
+		 </div>
+				  
+     <div class="moban-right-cplist">
+    			<div><a href="{#pic:link-1#}"><img src="{#prod:pict-4#}" width="118" height="115" border="0"></a></div>
+					<div><a href="{#pic:link-4#}">{#prod:title-4#}</a></div>
+		 </div>
+</div>
+
+</div>
+</div>
+<!--底部-->
+<div class="moban-bottom">
+	{#include:bottom#}
+</div>
+</div>
+</body>
+</html>

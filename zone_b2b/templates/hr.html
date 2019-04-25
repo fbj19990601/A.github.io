@@ -1,0 +1,418 @@
+<html xmlns="http:/www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>{#webtitle#}</title>
+		<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style>
+		<link href="/zone_b2b/css/css.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="/js/prototype.js"></script>
+		<script type="text/javascript" src="/zone_b2b/job/job.js"></script>
+		<script type='text/javascript' src='/dwr/interface/AreaInfo.js'></script>
+		<script type='text/javascript' src='/dwr/engine.js'></script>
+		<script type='text/javascript' src='/dwr/util.js'></script>
+	</head>
+	<body>
+		{#include-top#}
+		<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td height="5"></td>
+			</tr>
+			<tr>
+				<td>
+					<!--  img src="/zone_b2b/images/ba_41.gif" width="980" height="50" alt="" />-->
+					<div id="adv-1"></div>
+				</td>
+			</tr>
+			<tr>
+				<td height="10"></td>
+			</tr>
+		</table>
+		<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td width="378" valign="top">
+					<table width="100%" border="0" cellpadding="8" cellspacing="1" bgcolor="F5891D">
+						<tr>
+							<td height="151" valign="top" background="/zone_b2b/images/rencei.gif">
+								<form id="jobform" name="jobform" action="/zone_b2b/job/jobList.jsp" method="post" target="_blank">
+									<table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
+										<tr>
+											<td height="26" colspan="2" class="leftbt14">
+												Work for:
+											</td>
+										</tr>
+										<tr>
+											<td height="3" colspan="2" class="xian"></td>
+										</tr>
+										<tr>
+											<td width="100%" height="26">
+												Place of work
+												<select name="prov_1" id="prov_1" onclick="setCityInfo(this.value)">
+												<option value="0">
+													Information provinces
+												</option>
+												{#provice-1#}
+											  </select>
+												<select name="city_l" id="city_l" style="width: 150px">
+												 <option value="0">
+													Information city 
+												</option>
+											</select>
+											</td>
+										</tr>
+										<tr>
+											<td height="26" colspan="2">
+												Choice of occupation
+												<select name="pub_job" id="pub_job" style="width: 150px">
+													<option value="0">
+														--Type of choice of occupation--
+													</option>
+													{#job-type#}
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td height="26" colspan="2">
+												Published
+												<select name="pub_date" id="pub_date" style="width: 150px">
+													<option value="0">
+														--Select Time--
+													</option>
+												   <option value="3">
+														3 days
+													</option>
+													<option value="7">
+														1 week
+													</option>
+													<option value="30">
+														1 month
+													</option>
+													<option value="90">
+														3 months
+													</option>
+													<option value="365">
+														No restrictions
+													</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												Keyword&nbsp;<input name="job_key" id="job_key" type="text"  value="Please enter a keyword" maxlength="50" onMouseDown="javascript:this.value=''" onBlur="javascript:checkKey_Word()">
+												<img src="/zone_b2b/images/search.gif" width="56" height="21" border="0" style="cursor: hand;margin-top: 2px" onClick="return searchJob()">
+											</td>
+										</tr>
+									</table>
+								</form>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td valign="top">&nbsp;
+					
+				</td>
+				<td width="590" valign="top">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="50">
+								<img src="/zone_b2b/images/talent_1.gif" width="291" height="47">
+							</td>
+							<td width="291">
+								<img src="/zone_b2b/images/talent_2.gif" width="291" height="47">
+							</td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="50">
+								<img src="/zone_b2b/images/talent_3.gif"  width="291" height="47">
+							</td>
+							<td width="291">
+								<img src="/zone_b2b/images/talent_4.gif" width="291" height="47">
+							</td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="50">
+								<img src="/zone_b2b/images/talent_5.gif" width="291" height="47">
+							</td>
+							<td width="291">
+								<img src="/zone_b2b/images/talent_6.gif" width="291" height="47">
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<table width="980" height="10" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td></td>
+			</tr>
+		</table>
+		<table width="980" height="10" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<!--  img src="/zone_b2b/images/ad1.gif" width="980" height="39">-->
+					<div id="adv-2"></div>
+				</td>
+			</tr>
+		</table>
+		<table width="980" height="10" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td></td>
+			</tr>
+		</table>
+		<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td width="260" valign="top">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td width="2">
+								<img src="/zone_b2b/images/ba_105.gif" width="2" height="29" alt="">
+							</td>
+							<td align="center" background="/zone_b2b/images/ba_106.gif">
+								<table width="96%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td width="5%">
+											<img src="/zone_b2b/images/lujian.gif" width="5" height="9" />
+										</td>
+										<td width="78%" class="btlanse">
+											Recommended recruitment
+										</td>
+										<td width="17%">
+											<!--a href="/zone_b2b/rec_talents.jsp" class="lanse">更多&gt;&gt;</a-->
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td width="2">
+								<img src="/zone_b2b/images/ba_109.gif" width="2" height="29" alt="">
+									
+							</td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="9BBDD3">
+						<tr>
+							<td height="256" valign="top" bgcolor="#FFFFFF">
+								<table width="95%" border="0" align="center" cellpadding="2" cellspacing="0" class="rencei_table_xian">
+									{#list-12-tr-td#}
+								</table>
+							</td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="90">
+								<img src="/zone_b2b/images/qiuzhi_02.gif" width="260" height="80" alt="">
+							</td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="9BBDD3">
+						<tr>
+							<td height="210" valign="top" bgcolor="#FFFFFF">
+								<table width="95%" border="0" align="center" cellpadding="2" cellspacing="0" class="rencei_table_xian">
+									<tr>
+										<td width="79%" valign="top" class="btlanse">
+											Employment Guidance
+										</td>
+										<td width="21%">
+											<!--a href="/zone_b2b/news/zixun_list.jsp?news_type=5F0aX08s7E580660" style="float: left;">更多&gt;&gt;</a-->
+										</td>
+									</tr>
+								</table>
+								<table width="100%" border="0" cellspacing="1" cellpadding="2">
+									{#job-news:7#}
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td valign="top">&nbsp;
+					
+				</td>
+				<td width="710" valign="top">
+					<table width="100%" border=0 align="center" cellpadding=0 cellspacing=0>
+						<tr>
+							<td width="114" height="32" align="center" background="/zone_b2b/images/sup_3.gif" class="bthong">
+								&nbsp;&nbsp;Latest Recruitment
+							</td>
+							<td align="right" valign="bottom">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td width="2" height="24">
+											<img src="/zone_b2b/images/rencei_02.gif" width="2" height="24" alt="">
+										</td>
+										<td align="center" background="/zone_b2b/images/ba_133.gif">
+											<table width="96%" border="0" cellspacing="0" cellpadding="0">
+												<tr>
+													<td width="17%" align="right">
+														<a href="/zone_b2b/resume/newresumeList.jsp" target="_blank" class="zhong">more&gt;&gt;</a>
+													</td>
+												</tr>
+											</table>
+										</td>
+										<td width="2">
+											<img src="/zone_b2b/images/ba_135.gif" width="2" height="24" alt="">
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<table width="100%" border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="FFC367">
+						<tr>
+							<td height="556" valign="top" bgcolor="#FFFFFF">
+								<table width="687" border="0" align="center" cellpadding="0" cellspacing="0">
+									<tr>
+										<td width="343" height="540" valign="top">
+											<table width="96%" border="0" cellspacing="0" cellpadding="0">
+												{#new-resume-a:22#}
+											</table>
+										</td>
+										<td width="1" bgcolor="#cccccc"></td>
+										<td width="343" align="right" valign="top">
+											<table width="96%" border="0" cellspacing="0" cellpadding="0">
+												{#new-resume-b:22#}
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<table width="980" height="10" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td></td>
+			</tr>
+		</table>
+		<table width="980" height="10" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>
+					<!--  img src="/zone_b2b/images/ad1.gif" width="980" height="39">-->
+					<div id="adv-3"></div>
+				</td>
+			</tr>
+		</table>
+		<table width="980" height="10" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td></td>
+			</tr>
+		</table>
+		<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td width="260" valign="top">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td width="2">
+								<img src="/zone_b2b/images/ba_115.gif" width="2" height="29" alt="">
+							</td>
+							<td align="center" background="/zone_b2b/images/ba_116.gif">
+								<table width="96%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td width="5%">
+											<img src="/zone_b2b/images/zse.gif" width="5" height="9" />
+										</td>
+										<td width="78%" class="bthong">
+											Recommended talent
+										</td>
+										<td width="17%">
+											<a href="/zone_b2b/resume/newresumeNewList.jsp" class="zhong">more&gt;&gt;</a>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td width="2">
+								<img src="/zone_b2b/images/ba_117.gif" width="2" height="29" alt="">
+							</td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="FFC367">
+						<tr>
+							<td height="420" valign="top" bgcolor="#FFFFFF">
+								<table width="248" border="0" align="center" cellpadding="1" cellspacing="1">
+								{#resume-user-16#}
+								</table>
+							</td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="130">
+								<!--  img src="/zone_b2b/images/qiuzhi_02.gif" width="260" height="116" alt="">-->
+								<div id="adv-4"></div>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td valign="top">&nbsp;
+					
+				</td>
+				<td width="710" valign="top">
+					<table width="100%" border=0 align="center" cellpadding=0 cellspacing=0>
+						<tr>
+							<td width="114" height="32" align="center" background="/zone_b2b/images/sup_3.gif" class="bthong">
+								&nbsp;&nbsp;Latest Talent
+							</td>
+							<td align="right" valign="bottom">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td width="2" height="24">
+											<img src="/zone_b2b/images/rencei_02.gif" width="2" height="24" alt="">
+										</td>
+										<td align="center" background="/zone_b2b/images/ba_133.gif">
+											<table width="96%" border="0" cellspacing="0" cellpadding="0">
+												<tr>
+													<td width="17%" align="right">
+														<a href="/zone_b2b/resume/newresumeNewList.jsp" class="zhong">more&gt;&gt;</a>
+													</td>
+												</tr>
+											</table>
+										</td>
+										<td width="2">
+											<img src="/zone_b2b/images/ba_135.gif" width="2" height="24" alt="">
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<table width="100%" border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="FFC367">
+						<tr>
+							<td height="556" valign="top" bgcolor="#FFFFFF">
+								<table width="687" border="0" align="center" cellpadding="0" cellspacing="0">
+									<tr>
+										<td width="343" height="540" valign="top">
+											<table width="96%" border="0" cellspacing="0" cellpadding="0">
+												{#new-resume-a:25#}
+											</table>
+										</td>
+										<td width="1" bgcolor="#cccccc"></td>
+										<td width="343" align="right" valign="top">
+											<table width="96%" border="0" cellspacing="0" cellpadding="0">
+												{#new-resume-b:25#}
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<center>
+		{#include-bottom#}
+	</center>
+	</body>
+</html>

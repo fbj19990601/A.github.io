@@ -1,0 +1,154 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="visio.css"/>
+<title>
+sale
+</title>
+<script type="text/javascript" language="javascript">
+function UpdateTooltip(){};
+function OnShapeClick(){};
+</script>
+
+<script src="gif_1.js" type="text/jscript" language="jscript"></script>
+
+<script type="text/jscript" language="jscript">
+	if(parent.isUpLevel)
+	{
+		location.replace(parent.g_FileList[parent.g_CurPageIndex].PriImage);
+	}
+</script>
+
+
+
+<script type="text/jscript" language="jscript">
+
+var pageID = 0;
+
+var isUpLevel = parent.isUpLevel;
+var OnShapeClick = null;
+if (!parent.isMac)
+{
+	OnShapeClick = parent.OnShapeClick;
+}
+
+var OnShapeKey = parent.OnShapeKey;
+var UpdateTooltip = parent.UpdateTooltip;
+var clickMenu = parent.clickMenu;
+var toggleMenuDiv = parent.toggleMenuDiv;
+var toggleMenuLink = parent.toggleMenuLink;
+var GoToPage = parent.GoToPage;
+
+
+if (parent.isUpLevel)
+{
+
+	if (parent.g_FirstPageToLoad != null && parent.g_FirstPageToLoad.length > 0)
+	{
+		if (parent.g_FileList[parent.g_CurPageIndex].PageID != pageID)
+		{
+			var fileEntry = parent.g_FileList[parent.g_CurPageIndex];
+			var fileToLoad = fileToLoad = fileEntry.PriImage;
+			if (fileEntry.SecImage.length > 0)
+			{
+				fileToLoad = fileEntry.SecImage;
+			}
+
+			location.replace(fileToLoad);
+		}
+
+		parent.g_FirstPageToLoad = null;
+	}
+
+
+	var viewMgr = new parent.CViewMgr();
+	parent.viewMgr = viewMgr;
+
+	viewMgr.SupportsDetails = true;
+	viewMgr.SupportsSearch = true;
+
+	viewMgr.put_Location = ViewMgrSetRasterLocation;
+	viewMgr.visBBoxLeft = 0.392034;
+	viewMgr.visBBoxRight = 7.541037;
+	viewMgr.visBBoxBottom = 0.392034;
+	viewMgr.visBBoxTop = 11.300879;
+	viewMgr.highlightDiv = null;
+}
+
+function load ()
+{
+	if(isUpLevel)
+	{
+		arrowdiv.innerHTML = '<img id="arrowgif" alt="显示所选形状的位置" src="arrow.gif"/>';
+
+		var pageIndex = parent.PageIndexFromID (pageID);
+		parent.CurPageUpdate (pageIndex);
+	}
+}
+
+function unload()
+{
+	if(isUpLevel)
+	{
+		viewMgr = null;
+		parent.viewMgr = null;
+	}
+}
+
+window.onload = load;
+window.onunload = unload;
+document.onclick = clickMenu;
+
+</script>
+</head>
+
+<body class="pageView" bgcolor="#FFFFFF">
+
+<div id=arrowdiv style="position:absolute;top:0;left:0;visibility:hidden;z-index:5">
+</div>
+
+<div id="menu1" onclick="clickMenu()" class="hlMenu">
+</div>
+
+<DIV id=RasterDiv>
+
+
+<center>
+  <IMG id="ConvertedImage" SRC="gif_1.gif" ALT="页-1" name=RasterImage BORDER="0" USEMAP="#visImageMap">
+</center>
+
+<MAP NAME="visImageMap">
+  <AREA shape="POLYGON" tabindex="1" ALT="合同录入" origTitle="合同录入" TITLE="合同录入"  target="_top" COORDS=" 333,303 375,303 375,286 333,286 333,303" onmouseover="UpdateTooltip(this,0,76)" onfocus="UpdateTooltip(this,0,76)" onclick="return OnShapeClick(0,76);" onkeyup="OnShapeKey(0,76);">
+  <AREA shape="POLYGON" tabindex="1" ALT="审批" origTitle="审批" TITLE="审批"  target="_top" COORDS=" 332,254 354,267 376,254 354,241 332,254" onmouseover="UpdateTooltip(this,0,73)" onfocus="UpdateTooltip(this,0,73)" onclick="return OnShapeClick(0,73);" onkeyup="OnShapeKey(0,73);">
+  <AREA shape="POLYGON" tabindex="1" ALT="审批" origTitle="审批" TITLE="审批"  target="_top" COORDS=" 108,384 130,396 153,384 130,371 108,384" onmouseover="UpdateTooltip(this,0,70)" onfocus="UpdateTooltip(this,0,70)" onclick="return OnShapeClick(0,70);" onkeyup="OnShapeKey(0,70);">
+  <AREA shape="POLYGON" tabindex="1" ALT="审批" origTitle="审批" TITLE="审批"  target="_top" COORDS=" 108,199 130,212 153,199 130,186 108,199" onmouseover="UpdateTooltip(this,0,46)" onfocus="UpdateTooltip(this,0,46)" onclick="return OnShapeClick(0,46);" onkeyup="OnShapeKey(0,46);">
+  <AREA shape="POLYGON" tabindex="1" ALT="出库单" origTitle="出库单" TITLE="出库单"  target="_top" COORDS=" 180,323 225,323 225,306 180,306 180,323" onmouseover="UpdateTooltip(this,0,41)" onfocus="UpdateTooltip(this,0,41)" onclick="return OnShapeClick(0,41);" onkeyup="OnShapeKey(0,41);">
+  <AREA shape="POLYGON" tabindex="1" ALT="交货单" origTitle="交货单" TITLE="交货单"  target="_top" COORDS=" 108,323 153,323 153,306 108,306 108,323" onmouseover="UpdateTooltip(this,0,27)" onfocus="UpdateTooltip(this,0,27)" onclick="return OnShapeClick(0,27);" onkeyup="OnShapeKey(0,27);">
+  <AREA shape="POLYGON" tabindex="1" ALT="销售合同" origTitle="销售合同" TITLE="销售合同"  target="_top" COORDS=" 333,225 375,225 375,209 333,209 333,225" onmouseover="UpdateTooltip(this,0,40)" onfocus="UpdateTooltip(this,0,40)" onclick="return OnShapeClick(0,40);" onkeyup="OnShapeKey(0,40);">
+  <AREA shape="POLYGON" tabindex="1" ALT="审批" origTitle="审批" TITLE="审批"  target="_top" COORDS=" 259,525 282,537 304,525 282,512 259,525" onmouseover="UpdateTooltip(this,0,39)" onfocus="UpdateTooltip(this,0,39)" onclick="return OnShapeClick(0,39);" onkeyup="OnShapeKey(0,39);">
+  <AREA shape="POLYGON" tabindex="1" ALT="调度指令" origTitle="调度指令" TITLE="调度指令"  target="_top" COORDS=" 259,572 304,572 304,556 259,556 259,572" onmouseover="UpdateTooltip(this,0,38)" onfocus="UpdateTooltip(this,0,38)" onclick="return OnShapeClick(0,38);" onkeyup="OnShapeKey(0,38);">
+  <AREA shape="POLYGON" tabindex="1" ALT="配送订单" origTitle="配送订单" TITLE="配送订单"  target="_top" COORDS=" 259,500 304,500 304,484 259,484 259,500" onmouseover="UpdateTooltip(this,0,37)" onfocus="UpdateTooltip(this,0,37)" onclick="return OnShapeClick(0,37);" onkeyup="OnShapeKey(0,37);">
+  <AREA shape="POLYGON" tabindex="1" ALT="配送计划" origTitle="配送计划" TITLE="配送计划"  target="_top" COORDS=" 259,436 304,436 304,420 259,420 259,436" onmouseover="UpdateTooltip(this,0,36)" onfocus="UpdateTooltip(this,0,36)" onclick="return OnShapeClick(0,36);" onkeyup="OnShapeKey(0,36);">
+  <AREA shape="POLYGON" tabindex="1" ALT="配送需求" origTitle="配送需求" TITLE="配送需求"  target="_top" COORDS=" 259,405 304,405 304,388 259,388 259,405" onmouseover="UpdateTooltip(this,0,35)" onfocus="UpdateTooltip(this,0,35)" onclick="return OnShapeClick(0,35);" onkeyup="OnShapeKey(0,35);">
+  <AREA shape="POLYGON" tabindex="1" ALT="退换入库" origTitle="退换入库" TITLE="退换入库"  target="_top" COORDS=" 180,468 225,468 225,452 180,452 180,468" onmouseover="UpdateTooltip(this,0,34)" onfocus="UpdateTooltip(this,0,34)" onclick="return OnShapeClick(0,34);" onkeyup="OnShapeKey(0,34);">
+  <AREA shape="POLYGON" tabindex="1" ALT="退换出库" origTitle="退换出库" TITLE="退换出库"  target="_top" COORDS=" 180,436 225,436 225,419 180,419 180,436" onmouseover="UpdateTooltip(this,0,33)" onfocus="UpdateTooltip(this,0,33)" onclick="return OnShapeClick(0,33);" onkeyup="OnShapeKey(0,33);">
+  <AREA shape="POLYGON" tabindex="1" ALT="销售出库" origTitle="销售出库" TITLE="销售出库"  target="_top" COORDS=" 181,405 225,405 225,388 181,388 181,405" onmouseover="UpdateTooltip(this,0,32)" onfocus="UpdateTooltip(this,0,32)" onclick="return OnShapeClick(0,32);" onkeyup="OnShapeKey(0,32);">
+  <AREA shape="POLYGON" tabindex="1" ALT="审批" origTitle="审批" TITLE="审批"  target="_top" COORDS=" 259,461 282,473 304,461 282,448 259,461" onmouseover="UpdateTooltip(this,0,31)" onfocus="UpdateTooltip(this,0,31)" onclick="return OnShapeClick(0,31);" onkeyup="OnShapeKey(0,31);">
+  <AREA shape="POLYGON" tabindex="1" ALT="审批" origTitle="审批" TITLE="审批"  target="_top" COORDS=" 180,359 203,372 225,359 203,346 180,359" onmouseover="UpdateTooltip(this,0,30)" onfocus="UpdateTooltip(this,0,30)" onclick="return OnShapeClick(0,30);" onkeyup="OnShapeKey(0,30);">
+  <AREA shape="POLYGON" tabindex="1" ALT="退换货" origTitle="退换货" TITLE="退换货"  target="_top" COORDS=" 108,356 153,356 153,340 108,340 108,356" onmouseover="UpdateTooltip(this,0,28)" onfocus="UpdateTooltip(this,0,28)" onclick="return OnShapeClick(0,28);" onkeyup="OnShapeKey(0,28);">
+  <AREA shape="POLYGON" tabindex="1" ALT="审批" origTitle="审批" TITLE="审批"  target="_top" COORDS=" 108,274 130,287 153,274 130,262 108,274" onmouseover="UpdateTooltip(this,0,26)" onfocus="UpdateTooltip(this,0,26)" onclick="return OnShapeClick(0,26);" onkeyup="OnShapeKey(0,26);">
+  <AREA shape="POLYGON" tabindex="1" ALT="销售订单" origTitle="销售订单" TITLE="销售订单"  target="_top" COORDS=" 108,247 153,247 153,231 108,231 108,247" onmouseover="UpdateTooltip(this,0,25)" onfocus="UpdateTooltip(this,0,25)" onclick="return OnShapeClick(0,25);" onkeyup="OnShapeKey(0,25);">
+  <AREA shape="POLYGON" tabindex="1" ALT="销售报价" origTitle="销售报价" TITLE="销售报价"  target="_top" COORDS=" 108,172 153,172 153,156 108,156 108,172" onmouseover="UpdateTooltip(this,0,24)" onfocus="UpdateTooltip(this,0,24)" onclick="return OnShapeClick(0,24);" onkeyup="OnShapeKey(0,24);">
+  <AREA shape="POLYGON" tabindex="1" ALT="销售线索" origTitle="销售线索" TITLE="销售线索"  target="_top" COORDS=" 108,140 153,140 153,124 108,124 108,140" onmouseover="UpdateTooltip(this,0,23)" onfocus="UpdateTooltip(this,0,23)" onclick="return OnShapeClick(0,23);" onkeyup="OnShapeKey(0,23);">
+  <AREA shape="POLYGON" tabindex="1" ALT="销售机会" origTitle="销售机会" TITLE="销售机会"  target="_top" COORDS=" 108,108 153,108 153,92 108,92 108,108" onmouseover="UpdateTooltip(this,0,22)" onfocus="UpdateTooltip(this,0,22)" onclick="return OnShapeClick(0,22);" onkeyup="OnShapeKey(0,22);">
+  <AREA shape="POLYGON" tabindex="1" ALT="审批" origTitle="审批" TITLE="审批"  target="_top" COORDS=" 38,100 60,113 83,100 60,87 38,100" onmouseover="UpdateTooltip(this,0,21)" onfocus="UpdateTooltip(this,0,21)" onclick="return OnShapeClick(0,21);" onkeyup="OnShapeKey(0,21);">
+  <AREA shape="POLYGON" tabindex="1" ALT="销售计划" origTitle="销售计划" TITLE="销售计划"  target="_top" COORDS=" 38,75 83,75 83,59 38,59 38,75" onmouseover="UpdateTooltip(this,0,20)" onfocus="UpdateTooltip(this,0,20)" onclick="return OnShapeClick(0,20);" onkeyup="OnShapeKey(0,20);">
+</MAP>
+
+
+
+</DIV>
+
+</body>
+</html>
+

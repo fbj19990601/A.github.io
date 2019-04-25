@@ -1,0 +1,52 @@
+#magicbox {
+	margin: 0;
+    width: 950px;
+    color: white;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin-left:26px;
+}
+#magicbox a{
+	color: white;
+	font-weight: bold
+}
+#magicmenu{
+	position: absolute;
+	right: 0;
+	top:-25px;
+}
+#magicbox div, #magicbox p{
+	margin: 0;
+}
+#magicmenu ul{
+	list-style-type: none;
+	margin: 0;
+}
+#magicmenu ul li{
+	display: inline;
+}
+#magicmenu ul li a{
+	display: block;
+	float: right;
+	background: #A6906D;
+	border: 1px solid white;
+	border-bottom: none;
+	margin-right: 2px;
+	padding: 4px 12px 0 12px;
+	height: 21px;
+	color: white;
+	position: relative;
+}
+#magiccontent{
+	clear: both;
+	background: #3D3D3D;
+	border-top: 1px solid white;
+	color: white;
+}
+#magiccontent div{
+	padding: 3px
+}
+#magicmaxi{
+	border-top: 1px dotted white;
+}

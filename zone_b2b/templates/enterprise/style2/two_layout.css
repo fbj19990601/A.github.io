@@ -1,0 +1,444 @@
+/* CSS Document */
+body{
+     margin:0px;
+	 padding:0px;
+	 line-height:20px;
+	 font-size:12px;
+	 background-color:#2F5AB8;
+	 }
+tr,td,p,table{
+	 line-height:20px;
+	 font-size:12px;
+	 }
+A:link{
+     color:#333333;
+	 text-decoration:none;
+	 }
+A:visited{
+     color:#333333;
+	 text-decoration:none;
+	 }
+a:active{
+     color:#333333;
+	 text-decoration:none;
+	 }
+A:hover{ 
+	 color:#024EAF;
+	 text-decoration:underline;
+	 }
+.bg{background-attachment: scroll;
+	background-image: url(images/index.gif);
+	background-repeat: no-repeat;
+	background-position: center top;}
+ 
+ /*头部1*/
+.moban_top{
+	height:auto;
+	width:100%;
+	background-attachment: scroll;
+	background-image: url(images/moban_01.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	}
+.moban_top_div{
+   width:956px;
+   height:27px;
+}
+.moban_top_left{
+	height:27px;
+	width:auto;
+	float:left;
+	line-height: 24px;
+}
+.moban_top_right{
+   height:27px;
+   width:auto;
+   float:right;
+   line-height: 24px;
+}
+.moban_top_right{
+   height:27px;
+   width:auto;
+   float:right;
+   line-height: 24px;
+}
+
+ /*头部2*/
+.moban_head{
+   height:105px;
+   width:960px;
+}
+.moban_head_left{
+   height:105px;
+   width:auto;
+   float:left;
+}
+.moban_head_left h1 {
+	font-family: "黑体";
+	color:#FFFFFF;
+	font-size: 30px;
+	padding-top: 20px;
+	padding-bottom: 1px;
+	margin-left: 20px;
+}
+.moban_head_left p {
+	text-indent: 2px;
+	margin-left: 20px;
+	color:#FFFFFF;
+} 
+.moban_head_right{
+    margin-right:0px;
+	margin-top:35px;
+	width:260px;
+	height:70px;
+	float:right;
+	background-image: url(images/max.png);
+}
+.moban_head_right_zi{
+	color:#FFFFFF;
+	width:120px;
+	text-align:left;
+	height:auto;
+	float:right;
+	font-size: 12px;
+	font-weight: bold;
+	margin-top:24px;
+	 }
+	 
+ /*导航*/
+.moban-dh{
+       width:960px;
+	   height:35px;
+	   line-height:35px;
+	   background:url(images/dh.gif) left top repeat-x;
+	   }
+.dh {
+	CURSOR: hand;
+	height:35px;
+	line-height:35px;
+	width:auto;
+	color:#FFFFFF;
+	font-size:12px;
+	font-weight:bold;
+	background-attachment: scroll;
+	background-image: url(images/dh0.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+	   }
+.dh A:link{
+	   color:#FFFFFF;
+	   text-decoration:none;
+	 }
+
+.dh A:visited{
+     color:#FFFFFF;
+	 text-decoration:none;
+	 }
+
+.dh a:active{
+     color:#FFFFFF;
+	 text-decoration:none;
+	 }
+
+.dh A:hover{ 
+	 color:#FFFFFF;
+	 text-decoration:underline;
+	 }
+
+.dhse {
+	CURSOR: hand;
+	height:35px;
+	line-height:35px;
+	width:auto;
+	COLOR: #00359A;
+	font-weight:bold;
+	background-attachment: scroll;
+	background-image: url(images/moban_08.gif);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.dhse A:link{
+     color:#00359A;
+	 text-decoration:none;
+	 }
+
+.dhse A:visited{
+     color:#00359A;
+	 text-decoration:none;
+	 }
+
+.dhse a:active{
+     color:#00359A;
+	 text-decoration:none;
+	 }
+
+.dhse A:hover{ 
+	 color:#0099FF;
+	 text-decoration:underline;
+	 }
+.moban-banner{
+	width:958px;
+	height:213px;
+	border:1px solid #3D519B; 
+	background:url(images/moban_20.gif) center center no-repeat;
+	background-color:#ffffff;
+	}	 
+	 
+.moban-banner-zi{
+	   width:auto;
+	   height:auto;
+	   line-height:40px;
+	   float:right;
+	   text-align:right;
+	   margin:20px 20px 0 0;
+	   font-size:30px;
+	   font-weight:500px;
+	   color:#FFF;
+	   letter-spacing:1PX;
+	   font-family:"黑体"
+	   }
+/*中部*/
+.moban-width{
+	   width:960px;
+	   height:auto;
+	   }
+/*左边*/   
+.moban-left{
+    width:222px;
+	padding-top:1px;
+	height:auto;
+	float:left;
+	border:1px solid #3D519B; 
+	background-color:#ffffff;
+	margin-top:3px;
+	}
+.moban-left-lmt{
+    width:220px;
+	height:29px;
+	background:url(images/moban_23.gif) left top no-repeat;
+	}
+.moban-left-lmt1{
+    width:auto;
+	color:#ffffff;
+	font-weight:bold;
+	font-size:13px;
+	float:left;
+	padding-left:36px;
+	height:29px;
+	line-height:29px;
+	}
+.moban-left-lmt2{
+    width:auto;
+	color:#ffffff;
+	font-size:12px;
+	float:right;
+	padding-right:10px;
+	height:29px;
+	line-height:29px;
+	}
+.moban-left-lmt2 A:link{
+	   color:#FFFFFF;
+	   text-decoration:none;
+	 }
+
+.moban-left-lmt2 A:visited{
+     color:#FFFFFF;
+	 text-decoration:none;
+	 }
+
+.moban-left-lmt2 a:active{
+     color:#FFFFFF;
+	 text-decoration:none;
+	 }
+
+.moban-left-lmt2 A:hover{ 
+	 color:#FFFFFF;
+	 text-decoration:underline;
+	 }
+.moban-left-zi{
+       width:200px;
+	   text-align:left;
+	   color:#002D7D;
+	   height:auto;
+	   padding-bottom:6px;
+	   }
+.moban-left-zi0{
+       width:200px;
+	   text-align:left;
+	   color:#666666;
+	   height:26px;
+	   line-height:26px;
+	   border-bottom:1px dashed #cccccc; 
+	   }
+.moban-leftlist{
+       padding-top:5px; 
+       width:100%;
+	   height:auto;
+       padding-bottom:6px;
+	   }
+.moban-left-list{
+	padding-top:4px; 
+	padding-left:10px; 
+	text-align:left;
+	float:left;
+	width:210px;
+	height:auto;
+}
+.moban-left-list ol{
+       margin:0px;
+	   padding:0px;
+	   float:left;
+	   }
+.moban-left-list li{
+       margin:0px;
+	   line-height:23px;
+	   background:url(images/tbiao.gif) left center no-repeat;
+	   border-bottom: #CDD4DA 1px dashed;
+	   padding-left:12px;
+	   width:180px;
+	   list-style-type:none;
+	   }
+/*右边*/ 
+.moban-right{
+    width:730px;
+	height:auto;
+	padding-top:1px;
+	float:right;
+	border:1px solid #3D519B; 
+	background-color:#ffffff;
+	margin-top:3px;
+	}
+.moban-right-lmt{
+    width:728px;
+	height:29px;
+	background:url(images/moban_25.gif) left top no-repeat;
+	}
+.moban-right-lmt1{
+    width:auto;
+	color:#ffffff;
+	font-weight:bold;
+	font-size:13px;
+	float:left;
+	padding-left:36px;
+	height:29px;
+	line-height:29px;
+	}
+.moban-right-lmt2{
+    width:auto;
+	color:#001592;
+	font-size:12px;
+	float:right;
+	padding-right:10px;
+	height:29px;
+	line-height:29px;
+	}
+.moban-right-lmt2 A:link{
+	   color:#001592;
+	   text-decoration:none;
+	 }
+
+.moban-right-lmt2 A:visited{
+     color:#001592;
+	 text-decoration:none;
+	 }
+
+.moban-right-lmt2 a:active{
+     color:#001592;
+	 text-decoration:none;
+	 }
+
+.moban-right-lmt2 A:hover{ 
+	 color:#001592;
+	 text-decoration:underline;
+	 }
+.cswidth{
+     padding-top:10px;
+     width:700px;
+	 height:auto;
+	 
+	  text-align:left;
+	 padding-bottom:10px;
+	 }
+.moban-right-01{
+       width:140px;
+	   height:auto;
+	   padding:3px;
+	   float:left;
+	   border:1px solid #ccc;
+	   }	 
+.moban-right-02{
+      width:540px;
+	  height:auto;
+	  float:right;
+	  text-align:left;
+	  padding-top:10px;
+	  padding-left:10px;
+	   }	
+.moban-right-cplist{
+	width:175px;
+	height:auto;
+	float:left; 
+	text-align:center;
+}
+.moban-right-jiage{
+	color:#9D0B0E;
+	height:26px;
+}
+.moban-right-jiage A:link{
+     color:#9D0B0E;
+	 text-decoration:none;
+	 }
+
+.moban-right-jiage A:visited{
+     color:#9D0B0E;
+	 text-decoration:none;
+	 }
+
+.moban-right-jiage a:active{
+     color:#9D0B0E;
+	 text-decoration:none;
+	 }
+
+.moban-right-jiage A:hover{ 
+	 color:#024EAF;
+	 text-decoration:underline;
+	 }
+	 
+/*底部*/   
+.moban-bottom{
+    width:958px;
+	height:83px;
+	border:1px solid #3D519B; 
+	background-color:#ffffff;
+	margin-top:3px;
+	margin-bottom:0px;
+	text-align:center;
+	background:url(images/moban_33.gif);
+	}
+.moban-time{color:#999999;}
+.moban--news-page {
+       border-top: #cccccc 1px dashed; 
+	   margin-top:10px;
+	   font-weight:bold; 
+	   font-size:13px; 
+	   color:#002D7D;
+	   padding-bottom:10px; 
+	   padding-top:10px; 
+	   text-align:center;
+}
+.biaodan {
+	font-size: 12px;
+	background-color: #FFFFFF;
+	border-bottom-width: 1px;
+	border-bottom-style: solid; 
+	border-bottom-color: #CCCCCC;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-width: 1px;
+	border-right-color: #CCCCCC;
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-top-color: #999999;
+	border-left-color: #999999;
+}

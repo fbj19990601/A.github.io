@@ -1,0 +1,61 @@
+/* CSS Document */
+
+td,input,select {font-size:12px;color:#000000;}
+
+.xyl1,.xyl1 a ,.xyl1 td {color:#333333}
+.lh22{line-height:17px;}
+.bold{
+	font-weight:bold;
+	font-size: 14px;
+	text-decoration: none;
+}
+.big14{
+	font-size: 14px;
+	text-decoration: none;
+}
+.orange{
+	color:#FF6600;
+	text-decoration: none;
+}
+.xyl5,a.xyl5:visited {
+	font-weight: bold;
+	color:#ff6600;
+	line-height:20px;
+	text-decoration: underline;
+}
+.xyl3,a.xyl3:visited {
+	color:#211cde;
+	line-height:20px;
+	text-decoration: underline;
+}
+a.xyl3:hover{
+	color:#FF6600;
+	text-decoration:underline;
+}
+.xyl4,a.xyl4:visited {
+	color:#211cde;
+	line-height:20px;
+	text-decoration: underline;
+	font-size: 14px;
+	font-weight: bold;
+}
+a.xyl4:hover{
+	color:#FF6600;
+	text-decoration:underline;
+	font-size: 14px;
+	font-weight: bold;
+}
+.line {
+	line-height: 120%;
+}
+body {
+	margin-top: 0px;
+}
+.bold01 {
+	color: #fb7600;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+}
+.xyl2,.xyl2 a ,.xyl2 td {color:#666666;line-height: 120%;}
+.unline,.unline a {text-decoration:underline}

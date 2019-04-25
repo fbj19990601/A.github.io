@@ -1,0 +1,458 @@
+/* CSS Document */
+body{
+     margin:0px;
+	 padding:0px;
+	 line-height:20px;
+	 font-size:12px;
+	 background-color:#663300;
+	 }
+tr,td,p,table{
+	 line-height:20px;
+	 font-size:12px;
+	 }
+A:link{
+     color:#333333;
+	 text-decoration:none;
+	 }
+A:visited{
+     color:#333333;
+	 text-decoration:none;
+	 }
+a:active{
+     color:#333333;
+	 text-decoration:none;
+	 }
+A:hover{ 
+	 color:#A47A50;
+	 text-decoration:underline;
+	 }
+.bg{background-attachment: scroll;
+	background-image: url(images/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center top;}
+ 
+ /*头部1*/
+.moban_top{
+	height:auto;
+	width:100%;
+	background-attachment: scroll;
+	background-image: url(images/moban_01.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	}
+.moban_top_div{
+   width:956px;
+   height:27px;
+}
+.moban_top_left{
+	height:27px;
+	width:auto;
+	float:left;
+	line-height: 24px;
+}
+.moban_top_right{
+   height:27px;
+   width:auto;
+   float:right;
+   line-height: 24px;
+}
+.moban_top_right{
+   height:27px;
+   width:auto;
+   float:right;
+   line-height: 24px;
+}
+
+ /*头部2*/
+.moban_head{
+   height:115px;
+   width:960px;
+}
+.moban_head_left{
+   height:115px;
+   width:auto;
+   float:left;
+}
+.moban_head_left h1 {
+	font-family: "黑体";
+	color:#fff;
+	font-size: 30px;
+	padding-top: 20px;
+	padding-bottom: 1px;
+	margin-left: 20px;
+}
+.moban_head_left p {
+	text-indent: 2px;
+	margin-left: 20px;
+	color:#fff;
+} 
+.moban_head_right{
+    margin-right:0px;
+	margin-top:35px;
+	width:260px;
+	height:70px;
+	float:right;
+	background-image: url(images/max.png);
+}
+.moban_head_right_zi{
+	color:#FFFFFF;
+	width:120px;
+	text-align:left;
+	height:auto;
+	float:right;
+	font-size: 12px;
+	font-weight: bold;
+	margin-top:24px;
+	 }
+	 
+ /*导航*/
+
+.moban-dh{
+       width:958px;
+	   height:29px;
+	   line-height:29px;
+	   background:url(images/moban10_07.gif) left top repeat-x;
+	   }
+.dh {
+	CURSOR: hand;
+	height:29px;
+	line-height:29px;
+	width:89px;
+	color:#fff;
+	font-size:13px;
+	padding-top:3px;
+	background-attachment: scroll;
+	background-image: url(images/tiaot.gif);
+	background-repeat: no-repeat;
+	background-position: right center;
+	   }
+.dh A:link{
+	   color:#fff;
+	   text-decoration:none;
+	 }
+
+.dh A:visited{
+     color:#fff;
+	 text-decoration:none;
+	 }
+
+.dh a:active{
+     color:#fff;
+	 text-decoration:none;
+	 }
+
+.dh A:hover{ 
+	 color:#fff;
+	 text-decoration:underline;
+	 }
+
+.dhse {
+	CURSOR: hand;
+	height:29px;
+	line-height:29px;
+	padding-top:3px;
+	width:89px;
+	COLOR: #FF9000;
+	background-attachment: scroll;
+	background-image: url(images/dh_08.gif);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.dhse A:link{
+     color:#FF9000;
+	 text-decoration:none;
+	 }
+
+.dhse A:visited{
+     color:#FF9000;
+	 text-decoration:none;
+	 }
+
+.dhse a:active{
+     color:#FF9000;
+	 text-decoration:none;
+	 }
+
+.dhse A:hover{ 
+	 color:#FF9000;
+	 text-decoration:underline;
+	 }
+.moban-banner{
+	width:956px;
+	height:316px;
+	margin-top:9px;
+	background:url(images/moban10_03.gif) center center no-repeat;
+	}	 
+	 
+.moban-banner-zi{
+	   width:auto;
+	   height:auto;
+	   line-height:40px;
+	   float:right;
+	   text-align:right;
+	   margin:20px 20px 0 0;
+	   font-size:30px;
+	   font-weight:500px;
+	   color:#fff;
+	   letter-spacing:1PX;
+	   font-family:"黑体"
+	   }
+/*中部*/
+.moban-width{
+	   width:964px;
+	   height:auto;
+	   background:url(images/moban10_11.gif) left top repeat-y;
+	   }
+/*左边*/   
+.moban-left{
+    width:224px;
+	margin-left:8px;
+	height:auto;
+	float:left;
+	margin-top:10px;
+	border-right:1px dashed #CEBDAD;
+	}
+.moban-left-xian{
+    width:223px;
+	margin-bottom:5px;
+	}
+.moban-left-lmt{
+    width:223px;
+	height:46px;
+	padding-top:10px;
+	background:url(images/moban10_15.gif) left top no-repeat;
+	}
+.moban-left-lmt1{
+    width:auto;
+	color:#fff;
+	font-weight:bold;
+	font-size:13px;
+	float:left;
+	padding-left:30px;
+	height:24px;
+	line-height:24px;
+	}
+.moban-left-lmt2{
+    width:auto;
+	color:#442200;
+	font-size:12px;
+	float:right;
+	padding-right:10px;
+	padding-top:3px;
+	height:24px;
+	line-height:24px;
+	}
+.moban-left-lmt2 A:link{
+	   color:#442200;
+	   text-decoration:none;
+	 }
+
+.moban-left-lmt2 A:visited{
+     color:#442200;
+	 text-decoration:none;
+	 }
+
+.moban-left-lmt2 a:active{
+     color:#442200;
+	 text-decoration:none;
+	 }
+
+.moban-left-lmt2 A:hover{ 
+	 color:#442200;
+	 text-decoration:underline;
+	 }
+.moban-left-zi{
+       width:200px;
+	   text-align:left;
+	   color:#666666;
+	   height:auto;
+	   padding-bottom:6px;
+	   }
+.moban-left-zi0{
+       width:200px;
+	   text-align:left;
+	   color:#FD6C0B;
+	   height:26px;
+	   line-height:26px;
+	   border-bottom:1px dashed #cccccc; 
+	   }
+.moban-leftlist{
+       padding-top:5px; 
+       width:100%;
+	   height:auto;
+       padding-bottom:6px;
+	   }
+.moban-left-list{
+	padding-top:4px; 
+	padding-left:10px; 
+	text-align:left;
+	float:left;
+	width:210px;
+	height:auto;
+}
+.moban-left-list ol{
+       margin:0px;
+	   padding:0px;
+	   float:left;
+	   }
+.moban-left-list li{
+       margin:0px;
+	   line-height:23px;
+	   background:url(images/tbiao.gif) left center no-repeat;
+	   border-bottom: #CDD4DA 1px dashed;
+	   padding-left:18px;
+	   width:180px;
+	   list-style-type:none;
+	   }
+/*右边*/ 
+.moban-right{
+    width:706px;
+	height:auto;
+	float:right;
+	background-color:#ffffff;
+	margin-top:12px;
+	margin-right:8px;
+	}
+.moban-right-lmt{
+    width:706px;
+	height:33px;
+	background:url(images/moban10_18.gif) left top no-repeat;
+	}
+.moban-right-lmt1{
+    width:auto;
+	color:#442200;
+	font-weight:bold;
+	font-size:13px;
+	float:left;
+	padding-top:3px;
+	padding-left:30px;
+	height:33px;
+	line-height:33px;
+	}
+.moban-right-lmt2{
+    width:auto;
+	color:#442200;
+	font-size:12px;
+	float:right;
+	padding-right:10px;
+	height:33px;
+	margin:5px;
+	line-height:33px;
+	}
+.moban-right-lmt2 A:link{
+	   color:#442200;
+	   text-decoration:none;
+	 }
+
+.moban-right-lmt2 A:visited{
+     color:#442200;
+	 text-decoration:none;
+	 }
+
+.moban-right-lmt2 a:active{
+     color:#442200;
+	 text-decoration:none;
+	 }
+
+.moban-right-lmt2 A:hover{ 
+	 color:#442200;
+	 text-decoration:underline;
+	 }
+.cswidth{
+     padding-top:10px;
+     width:700px;
+	 height:auto;
+	 
+	  text-align:left;
+	 padding-bottom:10px;
+	 }
+.moban-right-01{
+       width:140px;
+	   height:auto;
+	   padding:3px;
+	   float:left;
+	   border:1px solid #ccc;
+	   }	 
+.moban-right-02{
+      width:540px;
+	  height:auto;
+	  float:right;
+	  text-align:left;
+	  padding-top:10px;
+	  padding-left:10px;
+	   }	
+.moban-right-cplist{
+	width:175px;
+	height:auto;
+	float:left; 
+	text-align:center;
+}
+.moban-right-jiage{
+	color:#FD6C0B;
+	height:26px;
+}
+.moban-right-jiage A:link{
+     color:#FD6C0B;
+	 text-decoration:none;
+	 }
+
+.moban-right-jiage A:visited{
+     color:#FD6C0B;
+	 text-decoration:none;
+	 }
+
+.moban-right-jiage a:active{
+     color:#FD6C0B;
+	 text-decoration:none;
+	 }
+
+.moban-right-jiage A:hover{ 
+	 color:#FF9966;
+	 text-decoration:underline;
+	 }
+	 
+/*底部*/   
+.moban-bottom{
+    width:964px;
+	height:82px;
+	color:#707070;
+	margin-bottom:0px;
+	text-align:center;
+	background:url(images/moban10_11.gif) left top repeat-y;
+	}
+.moban-bottom0{
+    width:960px;
+	height:82px;
+	color:#707070;
+	margin-bottom:0px;
+	text-align:center;
+	background:url(images/moban10_23.gif) left top repeat-x;
+	}
+	
+.moban-time{color:#999999;}
+.moban--news-page {
+       border-top: #cccccc 1px dashed; 
+	   margin-top:10px;
+	   font-weight:bold; 
+	   font-size:13px; 
+	   color:#666;
+	   padding-bottom:10px; 
+	   padding-top:10px; 
+	   text-align:center;
+}
+.biaodan {
+	font-size: 12px;
+	background-color: #FFFFFF;
+	border-bottom-width: 1px;
+	border-bottom-style: solid; 
+	border-bottom-color: #CCCCCC;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-width: 1px;
+	border-right-color: #CCCCCC;
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-top-color: #999999;
+	border-left-color: #999999;
+}

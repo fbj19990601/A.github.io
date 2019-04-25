@@ -1,0 +1,200 @@
+/*顶部定义*/
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.INPUT1 {
+	height: 16px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #CC0000;
+	font-size: 14px;
+	color: #999999;
+	padding-top: 4px;
+	padding-left: 5px;
+}
+.navcd {
+	background-image: url(../images/navbg.gif);
+	height: 55px;
+	width: 952px;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 12px;
+	color: #FFFF00;
+}
+.navhover {
+	font-size: 14px;
+	font-weight: bold;
+	color: #6D340C;
+	text-align: center;
+}
+
+
+.headerbg {
+	background-image: url(../images/headerbg.gif);
+	height: 25px;
+	padding-top: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+.navhover A:link {
+	TEXT-DECORATION: none;
+	color: #333333;
+}
+.navhover A:visited {
+COLOR: #333333; TEXT-DECORATION: none
+}
+.navhover A:hover {
+	color: #FF3300;
+	text-decoration: underline;
+}
+.layout950 {
+	width: 950px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+.left560 {
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+	border-top-width: 1px;
+}
+.right {
+	width: 250px;
+}
+.right14 {
+	font-size: 12px;
+	padding-left: 35px;
+	font-weight: bold;
+}
+.right14 A:link {
+	TEXT-DECORATION: none;
+	color: #009933;
+}
+.right14 A:visited {
+COLOR: #006633; TEXT-DECORATION: none
+}
+.right14 A:hover {
+	color: #FF3300;
+	text-decoration: underline;
+}
+.wz14 {
+	font-size: 12px;
+	line-height: 200%;
+	color: #333333;
+}
+.luse {
+	color: #339933;
+}
+.lvse14 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #1A8F1A;
+}
+
+
+.font14 {
+}
+
+.leftwz160 {
+	font-size: 12px;
+	line-height: 180%;
+	color: #666666;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.yellowfont14 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #F15223;
+}
+
+.mainwz14 {
+	font-size: 12px;
+	line-height: 180%;
+	color: #666666;
+}
+.kuang {
+	border: 1px solid #CCCCCC;
+	line-height: 150%;
+	font-weight: normal;
+}
+.tel {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	color: #FF3300;
+	font-weight: bold;
+}
+.lansekuang {
+	border: 1px solid #A0C3DF;
+}
+.font25 {
+	font-family: "黑体";
+	font-size: 20px;
+	padding-bottom: 10px;
+	padding-top: 5px;
+}
+.font14m {
+	font-size: 14px;
+	color: #003366;
+}
+.font14_1 {
+	font-size: 12px;
+	padding-bottom: 10px;
+	line-height: 150%;
+	color: #333333;
+}
+a:link {
+	color: #666666;
+	text-decoration: underline;
+}
+a:visited {
+	color: #666666;
+	text-decoration: underline;
+}
+a:hover {
+	color: #FF3300;
+	text-decoration: none;
+}
+
+.hover {
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-image: url(../images/hover.gif);
+	height: 25px;
+	width: 90px;
+	background-repeat: no-repeat;
+	padding-bottom: 4px;
+	padding-top: 4px;
+}
+.hover A:link {
+	TEXT-DECORATION: none;
+	color: #ffffff;
+}
+.hover A:visited {
+COLOR: #ffffff; TEXT-DECORATION: none
+}
+.hover A:hover {
+	color: #ffffff;
+	text-decoration: underline;
+}
+.layout950 .wz14 table {
+	padding-left: 20px;
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html"%>
+
+<%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic"%>
+
+<%@ taglib uri="/WEB-INF/struts-bean.tld" prefix="bean"%>
+
+<%@ page import="java.util.*"%>
+
+<%@ page import="com.saas.biz.actionMgr.ActionMgr"%>
+
+<%@ page import="com.saas.biz.commen.ParamethodMgr"%>
+
+<%@ page contentType="text/html;charset=GBK"%>
+
+
+
+<html>
+
+<head>
+
+<title>Xsaas-客户关系管理</title>
+
+</head>
+
+<body>
+
+<%
+
+   HttpSession  logsession = request.getSession(); 
+    String cust_id = "";
+    String iStart ="0";
+    String menu_id="";
+
+    if (request.getParameter("iStart") != null)
+    {
+        iStart = request.getParameter("iStart");
+    }
+
+    if (logsession.getAttribute("SESSION_CUST_ID") != null)
+    {
+        cust_id = logsession.getAttribute("SESSION_CUST_ID").toString();
+    }
+
+    if (request.getParameter("menu_id") != null)
+    {
+        menu_id = request.getParameter("menu_id");
+    }
+
+    
+   ActionMgr action = new ActionMgr();
+   ArrayList actionList =new ArrayList();
+   actionList=action.getActionByOpp(Integer.valueOf(iStart).intValue(),cust_id,"2");
+   int counter=action.getActionByOpp(cust_id,"2");
+   
+    int pages=counter/20+1;
+	int pageUp=0,pageDown=0;
+	int currenPage=Integer.valueOf(iStart).intValue();
+	if(pages>currenPage)
+	{
+	   if(currenPage>0)
+	   {
+		pageUp=currenPage-1;
+	   }
+		pageDown=currenPage+1;
+	}
+    else if(pages==currenPage)
+	{
+	   pageUp=currenPage-1;
+	   pageDown=currenPage;
+	}
+%>
+
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+	  <tr>
+
+	    <td height="13" align="left">
+
+	    </td>
+
+	  </tr>
+
+	  <tr>
+
+	    <td>
+
+		     <table width=100% border=0 cellpadding=2 cellspacing=1 align=center  bgcolor="#e7e7e7">
+
+		        <tr>
+
+			        <td class="line1" style="background-color:#e2e2e2; color:#000000;  font-weight:bold; font-size:13px;" align=center width="20%">标题</td>
+					<td style="background-color:#e2e2e2; color:#000000;  font-weight:bold; font-size:13px;" align=center width="15%">竞争对手名称</td>
+					<td style="background-color:#e2e2e2; color:#000000;  font-weight:bold; font-size:13px;" align=center width="15%">发布日期</td>
+					<td style="background-color:#e2e2e2; color:#000000;  font-weight:bold; font-size:13px;" align=center width="10%">修改</td>
+					<td style="background-color:#e2e2e2; color:#000000;  font-weight:bold; font-size:13px;" align=center width="10%">删除</td>
+		        </tr>
+
+		       <%	
+		            if(actionList != null && actionList.size()>0)
+		            {    
+		              	 for (int i=0;i<actionList.size();i++)
+		                  {
+						        HashMap map = (HashMap)actionList.get(i);
+						        String obj_cust_id="",own_id="",entity_id="";
+						        String cust_name="",content="",remark="";
+						        String title="",info_date="";
+						        String publish_date="";
+						        if(map.get("own_id")!=null){
+						         own_id=map.get("own_id").toString();
+						        }
+						        if(map.get("entity_id")!=null){
+						         entity_id=map.get("entity_id").toString();
+						        }
+						        if(map.get("info_date")!=null){
+						         info_date=map.get("info_date").toString();
+						        }
+						        if(map.get("content")!=null){
+						         content=map.get("content").toString();
+						        }
+						        if(map.get("remark")!=null){
+						         remark=map.get("remark").toString();
+						        }
+						        if(map.get("obj_cust_id")!=null){
+						         obj_cust_id=map.get("obj_cust_id").toString();
+						        }
+						        if(map.get("title")!=null){
+						         title=map.get("title").toString();
+						        }
+						        if(map.get("publish_date")!=null){
+						         publish_date=map.get("publish_date").toString();
+						        }
+						        if(map.get("cust_name")!=null){
+						         cust_name=map.get("cust_name").toString();
+						        }
+						        %>
+						        <tr style="background-color:#f9f9f9; " id="changcolor_tr<%=i%>" onmouseover="MM_changeProp('changcolor_tr<%=i%>','','backgroundColor','#ffffff','DIV')" onmouseout="MM_changeProp('changcolor_tr<%=i%>','','backgroundColor','#f9f9f9','DIV')">
+					              <td  style=" color:#000; padding:2px 5px;" align=left><%=title%></td>
+					              <td  style=" color:#000000; padding:2px 5px;" align=left><a href="/customerMgr/Custinfo.jsp?obj_cust_id=<%=obj_cust_id%>&user_id=" target="_blank"><%=cust_name%></a></td>
+					              <td  style=" color:#000000; padding:2px 5px;" align=left><%=publish_date%></td>
+					              <td  style=" color:#000000; padding:2px 5px;" align="center"><a href="updateOppInfo.jsp?menu_id=<%=menu_id%>&own_id=<%=own_id%>&entity_type=2&entity_id=<%=entity_id %>&cust_name=<%=cust_name%>&title=<%=title%>&content=<%=content%>&remark=<%=remark%>&info_date=<%=info_date %>"><img src="/img/edit.png"></a></td>
+					              <td  style=" color:#000000; padding:2px 5px;" align="center"><a href="/doTradeReg.do?trade_type_code=1056&own_id=<%=own_id%>&entity_type=2&entity_id=<%=entity_id %>"><img src="/img/del.gif"></a></td>
+					            </tr>
+						        <%
+					     }
+					     %>
+					     <tr>
+							<td  align="left" colspan="2" style="font-weight:normal; padding:2px 5px;">共<%=counter%>条 &nbsp;共<%=pages%>页</td>
+							<td  align="right" colspan="4" style=" padding:2px 5px;"><a href="oppInfoMgr.jsp?iStart=0&menu_id=<%=menu_id%>">首页 </a>&nbsp; &nbsp;<a href="oppInfoMgr.jsp?iStart=<%=pageUp%>&menu_id=<%=menu_id%>">上一页</a> &nbsp;<a href="oppInfoMgr.jsp?iStart=<%=pageDown%>&menu_id=<%=menu_id%>">下一页 </a>&nbsp; <a  href="oppInfoMgr.jsp?iStart=<%=pages%>&menu_id=<%=menu_id%>">尾页</a></td>
+				         </tr>
+					 <%}
+		        %>
+		    </table>
+	     </td>
+	  </tr>
+	  <tr>
+	    <td height="13"></td>
+	  </tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" 
+ xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"/>
+<link rel="stylesheet" type="text/css" href="visio.css"/>
+<title>sale</title>
+<style type="text/css">
+	 v\:* { behavior: url(#default#VML); }
+</style>
+
+<script src="vml_1.js" type="text/jscript" language="jscript"></script>
+
+<script type="text/jscript" language="jscript">
+
+	var pageID = 0;
+	var viewMgr = null;
+
+	if (parent.g_FirstPageToLoad != null && parent.g_FirstPageToLoad.length > 0)
+	{
+		if (parent.g_FileList[parent.g_CurPageIndex].PageID != pageID)
+		{
+			location.replace(parent.g_FileList[parent.g_CurPageIndex].PriImage);
+		}
+
+		parent.g_FirstPageToLoad = null;
+	}
+
+	function getPNZ()
+	{
+		var rawHTML = VMLDiv.innerHTML;
+		var strReturn = ""
+		
+		strReturn = rawHTML.slice( rawHTML.indexOf( '<v:group' ), rawHTML.indexOf( "</v:shape>" ) );
+		strReturn += "</v:shape></v:group>\n";
+				
+		return strReturn;
+	}
+	
+	function load()
+	{
+		viewMgr = new parent.CViewMgr("ConvertedImage", "arrowDiv");
+
+		viewMgr.put_Location = ViewMgrSetVMLLocation;
+
+
+		viewMgr.visBBoxLeft = 0.392034;
+		viewMgr.visBBoxRight = 7.541037;
+		viewMgr.visBBoxBottom = 0.392034;
+		viewMgr.visBBoxTop = 11.300879;
+
+		viewMgr.Zoom = VMLZoomChange;
+		viewMgr.setView= VMLSetView;
+
+		viewMgr.SupportsDetails = true;
+		viewMgr.SupportsSearch = true;
+
+		parent.viewMgr = viewMgr;
+
+		fit();
+	}
+
+	function unload()
+	{
+		viewMgr = null;
+		parent.viewMgr = null;
+	}
+
+	function fit()
+	{
+		if(parent.frmToolbar)
+		{
+			if (parent.g_WidgetsLoaded)
+			{
+				var zoom100 = parent.frmToolbar.document.all('a100');
+				if (zoom100)
+				{
+					parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+					zoom100.click();
+				}
+				else
+				{
+					parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+					viewMgr.Zoom(100);
+				}
+			}
+			else
+			{
+				window.setTimeout("fit()", 500);
+			}
+		}	
+		else
+		{
+			parent.viewMgr.PostZoomProcessing = PostZoomProcessing;
+			viewMgr.Zoom(100);
+		}
+	}
+
+	function PostZoomProcessing (newZoomLevel)
+	{
+		parent.viewMgr.PostZoomProcessing = null;
+		var pageIndex = parent.PageIndexFromID (pageID);
+		parent.viewMgr.getPNZ = getPNZ;
+		parent.CurPageUpdate (pageIndex);
+	}
+
+
+	
+	var isUpLevel = parent.isUpLevel;
+	var OnShapeClick = parent.OnShapeClick;
+	var OnShapeKey = parent.OnShapeKey;
+	var UpdateTooltip = parent.UpdateTooltip;
+	var clickMenu = parent.clickMenu;
+	var toggleMenuDiv = parent.toggleMenuDiv;
+	var toggleMenuLink = parent.toggleMenuLink;
+	var GoToPage = parent.GoToPage;
+
+	window.onload = load;
+	window.onunload = unload;
+	document.onclick = clickMenu;
+
+
+
+
+</script>
+
+</head>
+
+<body style="MARGIN:10px" onresize="VMLOnResize();" onscroll="VMLOnScroll();">
+
+<div id="arrowdiv" style="position:absolute;top:0;left:0;visibility:hidden;z-index:5">
+<img id="arrowgif" alt="显示所选形状的位置" src="arrow.gif"/>
+</div>
+
+<div id="menu1" onclick="clickMenu()" class="hlMenu">
+</div>
+
+
+
+
+<div id="VMLDiv" >
+
+
+<v:group  id="ConvertedImage" style="width:2.621360in;height:4.000000in;position:absolute;visibility=hidden;" coordSize="1311,2000" coordOrigin="-1000,-1000" >
+
+<v:shapetype 
+  id="VISSHAPE"
+  target="_parent"
+  coordsize="1311,2000"
+  coordorigin="-1000,-1000"
+  stroked="f"
+  strokecolor="red"
+  filled="t"
+>
+<v:fill opacity="0.0"/>
+</v:shapetype>
+
+
+<v:shape style="top:-1000.0;left:-1000.0;width:1310.7;height:2000.0;position:absolute" coordSize="1311,2000" coordOrigin="-1000,-1000" >
+<v:imagedata src="vml_1.emz"/>
+</v:shape>
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="销售计划" origTitle="销售计划"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m -871,-749 l -724,-749 l -724,-803 l -871,-803 l -871,-749xe" onmouseover="UpdateTooltip(this,0,20)" onclick="OnShapeClick(0,20)" onfocus="UpdateTooltip(this,0,20);" onkeyup="OnShapeKey(0,20)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="审批" origTitle="审批"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m -871,-665 l -797,-623 l -724,-665 l -797,-708 l -871,-665xe" onmouseover="UpdateTooltip(this,0,21)" onclick="OnShapeClick(0,21)" onfocus="UpdateTooltip(this,0,21);" onkeyup="OnShapeKey(0,21)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="销售机会" origTitle="销售机会"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m -639,-638 l -492,-638 l -492,-692 l -639,-692 l -639,-638xe" onmouseover="UpdateTooltip(this,0,22)" onclick="OnShapeClick(0,22)" onfocus="UpdateTooltip(this,0,22);" onkeyup="OnShapeKey(0,22)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="销售线索" origTitle="销售线索"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m -639,-533 l -492,-533 l -492,-587 l -639,-587 l -639,-533xe" onmouseover="UpdateTooltip(this,0,23)" onclick="OnShapeClick(0,23)" onfocus="UpdateTooltip(this,0,23);" onkeyup="OnShapeKey(0,23)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="销售报价" origTitle="销售报价"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m -639,-426 l -492,-426 l -492,-480 l -639,-480 l -639,-426xe" onmouseover="UpdateTooltip(this,0,24)" onclick="OnShapeClick(0,24)" onfocus="UpdateTooltip(this,0,24);" onkeyup="OnShapeKey(0,24)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="销售订单" origTitle="销售订单"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m -639,-176 l -492,-176 l -492,-230 l -639,-230 l -639,-176xe" onmouseover="UpdateTooltip(this,0,25)" onclick="OnShapeClick(0,25)" onfocus="UpdateTooltip(this,0,25);" onkeyup="OnShapeKey(0,25)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="审批" origTitle="审批"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m -639,-86 l -566,-44 l -492,-86 l -566,-129 l -639,-86xe" onmouseover="UpdateTooltip(this,0,26)" onclick="OnShapeClick(0,26)" onfocus="UpdateTooltip(this,0,26);" onkeyup="OnShapeKey(0,26)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="退换货" origTitle="退换货"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m -639,185 l -492,185 l -492,131 l -639,131 l -639,185xe" onmouseover="UpdateTooltip(this,0,28)" onclick="OnShapeClick(0,28)" onfocus="UpdateTooltip(this,0,28);" onkeyup="OnShapeKey(0,28)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="审批" origTitle="审批"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m -399,194 l -326,236 l -252,194 l -326,151 l -399,194xe" onmouseover="UpdateTooltip(this,0,30)" onclick="OnShapeClick(0,30)" onfocus="UpdateTooltip(this,0,30);" onkeyup="OnShapeKey(0,30)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="审批" origTitle="审批"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m -138,531 l -64,574 l 9,531 l -64,488 l -138,531xe" onmouseover="UpdateTooltip(this,0,31)" onclick="OnShapeClick(0,31)" onfocus="UpdateTooltip(this,0,31);" onkeyup="OnShapeKey(0,31)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="销售出库" origTitle="销售出库"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m -398,345 l -253,345 l -253,291 l -398,291 l -398,345xe" onmouseover="UpdateTooltip(this,0,32)" onclick="OnShapeClick(0,32)" onfocus="UpdateTooltip(this,0,32);" onkeyup="OnShapeKey(0,32)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="退换出库" origTitle="退换出库"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m -399,449 l -252,449 l -252,395 l -399,395 l -399,449xe" onmouseover="UpdateTooltip(this,0,33)" onclick="OnShapeClick(0,33)" onfocus="UpdateTooltip(this,0,33);" onkeyup="OnShapeKey(0,33)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="退换入库" origTitle="退换入库"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m -399,557 l -252,557 l -252,503 l -399,503 l -399,557xe" onmouseover="UpdateTooltip(this,0,34)" onclick="OnShapeClick(0,34)" onfocus="UpdateTooltip(this,0,34);" onkeyup="OnShapeKey(0,34)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="配送需求" origTitle="配送需求"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m -138,345 l 9,345 l 9,291 l -138,291 l -138,345xe" onmouseover="UpdateTooltip(this,0,35)" onclick="OnShapeClick(0,35)" onfocus="UpdateTooltip(this,0,35);" onkeyup="OnShapeKey(0,35)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="配送计划" origTitle="配送计划"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m -138,449 l 9,449 l 9,395 l -138,395 l -138,449xe" onmouseover="UpdateTooltip(this,0,36)" onclick="OnShapeClick(0,36)" onfocus="UpdateTooltip(this,0,36);" onkeyup="OnShapeKey(0,36)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="配送订单" origTitle="配送订单"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m -138,662 l 9,662 l 9,608 l -138,608 l -138,662xe" onmouseover="UpdateTooltip(this,0,37)" onclick="OnShapeClick(0,37)" onfocus="UpdateTooltip(this,0,37);" onkeyup="OnShapeKey(0,37)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="调度指令" origTitle="调度指令"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m -138,901 l 9,901 l 9,847 l -138,847 l -138,901xe" onmouseover="UpdateTooltip(this,0,38)" onclick="OnShapeClick(0,38)" onfocus="UpdateTooltip(this,0,38);" onkeyup="OnShapeKey(0,38)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="审批" origTitle="审批"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m -138,744 l -64,786 l 9,744 l -64,701 l -138,744xe" onmouseover="UpdateTooltip(this,0,39)" onclick="OnShapeClick(0,39)" onfocus="UpdateTooltip(this,0,39);" onkeyup="OnShapeKey(0,39)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="销售合同" origTitle="销售合同"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m 105,-250 l 246,-250 l 246,-304 l 105,-304 l 105,-250xe" onmouseover="UpdateTooltip(this,0,40)" onclick="OnShapeClick(0,40)" onfocus="UpdateTooltip(this,0,40);" onkeyup="OnShapeKey(0,40)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="交货单" origTitle="交货单"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m -639,74 l -492,74 l -492,20 l -639,20 l -639,74xe" onmouseover="UpdateTooltip(this,0,27)" onclick="OnShapeClick(0,27)" onfocus="UpdateTooltip(this,0,27);" onkeyup="OnShapeKey(0,27)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="出库单" origTitle="出库单"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m -399,74 l -252,74 l -252,20 l -399,20 l -399,74xe" onmouseover="UpdateTooltip(this,0,41)" onclick="OnShapeClick(0,41)" onfocus="UpdateTooltip(this,0,41);" onkeyup="OnShapeKey(0,41)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="审批" origTitle="审批"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m -639,-336 l -566,-293 l -492,-336 l -566,-379 l -639,-336xe" onmouseover="UpdateTooltip(this,0,46)" onclick="OnShapeClick(0,46)" onfocus="UpdateTooltip(this,0,46);" onkeyup="OnShapeKey(0,46)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="审批" origTitle="审批"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m -639,276 l -566,318 l -492,276 l -566,233 l -639,276xe" onmouseover="UpdateTooltip(this,0,70)" onclick="OnShapeClick(0,70)" onfocus="UpdateTooltip(this,0,70);" onkeyup="OnShapeKey(0,70)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="审批" origTitle="审批"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m 102,-155 l 176,-112 l 250,-155 l 176,-197 l 102,-155xe" onmouseover="UpdateTooltip(this,0,73)" onclick="OnShapeClick(0,73)" onfocus="UpdateTooltip(this,0,73);" onkeyup="OnShapeKey(0,73)"/> 
+
+<v:shape type="#VISSHAPE"   tabindex="1" title="合同录入" origTitle="合同录入"  style="top:-1000;left:-1000;width:1311;height:2000;position:absolute" path=" m 105,7 l 246,7 l 246,-47 l 105,-47 l 105,7xe" onmouseover="UpdateTooltip(this,0,76)" onclick="OnShapeClick(0,76)" onfocus="UpdateTooltip(this,0,76);" onkeyup="OnShapeKey(0,76)"/> 
+
+</v:group>
+
+
+
+</div>
+
+
+
+</body>
+</html>
+

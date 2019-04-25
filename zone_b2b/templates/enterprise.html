@@ -1,0 +1,384 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>{#webtitle#}</title>
+		<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style>
+		<link href="/zone_b2b/css/css.css" rel="stylesheet" type="text/css" />
+		<script type='text/javascript' src='/dwr/interface/AreaInfo.js'></script>
+		<link rel="stylesheet" type="text/css" href="/zone_b2b/css/oocl_css.css" />
+		<script type='text/javascript' src='/dwr/engine.js'></script>
+		<script type='text/javascript' src='/dwr/util.js'></script>
+		<script type="text/javascript" src="/js/prototype.js"></script>
+		<script type="text/javascript" src="/zone_b2b/js/enterprise.js"></script>
+	</head>
+	<body>
+		<!--#include file="top.html"-->
+		{#include:top#}
+		<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td height="5"></td>
+			</tr>
+			<tr>
+				<td>
+					<!--  img src="/zone_b2b/images/ba_41.gif" width="980" height="50" alt="" />-->
+					<div id="adv-1"></div>
+				</td>
+			</tr>
+			<tr>
+				<td height="5"></td>
+			</tr>
+		</table>
+		<table width="980" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#E5E5E5">
+			<tr>
+				<td height="26" bgcolor="FAFAFA">
+					Current Position:<a href="/" >Home</a> <img src="/zone_b2b/images/lujian.gif" border="0"> <a href="/zone_b2b/enterprise/">Enterprises</a>
+				</td>
+			</tr>
+		</table>
+		<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td height="10"></td>
+			</tr>
+		</table>
+		<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td width="288" valign="top">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td width="2">
+								<img src="/zone_b2b/images/ba_105.gif" width="2" height="29" alt="">
+							</td>
+							<td align="center" background="/zone_b2b/images/ba_106.gif">
+								<table width="96%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td width="5%">
+											<img src="/zone_b2b/images/lujian.gif" width="5" height="9" />
+										</td>
+										<td width="78%" class="btlanse">
+											Enterprise Channel
+										</td>
+										<td width="17%">
+											<a href="/zone_b2b/news/" class="lanse">more&gt;&gt;</a>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td width="2">
+								<img src="/zone_b2b/images/ba_109.gif" width="2" height="29" alt="">
+							</td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="9BBDD3">
+						<tr>
+							<td height="260" valign="top" bgcolor="#FFFFFF">
+								<table width="94%" border="0" align="center" cellpadding="5" cellspacing="1">
+									{#EnterpriseChannel:1#}
+								</table>
+								<table width="94%" border="0" align="center" cellpadding="2" cellspacing="0">
+									<tr>
+										<td>
+											{#EnterpriseChannel:5#}
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<table width="50%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="7"></td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="9BBDD3">
+						<tr>
+							<td valign="top" bgcolor="#FFFFFF">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td height="26" background="/zone_b2b/images/btt.gif" class="btlanse">
+											&nbsp;&nbsp;Search
+										</td>
+									</tr>
+								</table>
+								<table width="90%" border="0" align="center" cellpadding="2" cellspacing="0">
+									<tr>
+										<td>
+											keywords：
+										</td>
+										<td>
+											<input name="ent_name" id="ent_name" type="text" class="0" value="Please enter the Enterprises name" size="20" maxlength="50" onMouseDown="this.value=''" onBlur="set_entKey()" style="width: 150px">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Provinces：
+										</td>
+										<td>
+											<select name="prov_1" id="prov_1" onclick="setCityInfo_left(this.value)">
+												<option value="0">
+													province
+												</option>
+												{#provice-1#}
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											City：
+										</td>
+										<td>
+											<select name="city_l" id="city_l" style="width: 150px">
+												 <option value="0">
+													Please select
+												</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Area：
+										</td>
+										<td>
+											<select name="part" id="part" style="width: 150px">
+												<option value="0">
+													Area
+												</option>
+												{#calalog-sale#}
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>&nbsp;
+											
+										</td>
+										<td>
+											<img src="/zone_b2b/images/search.gif" width="56" height="21" style="cursor:hand" onClick="searchEnterprise()">
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<table width="50%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="7"></td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="7">
+								<!--  img src="/zone_b2b/images/ad.jpg" width="288" height="75">-->
+								<div id="adv-3"></div>
+							</td>
+						</tr>
+					</table>
+					<table width="50%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="7"></td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td width="2">
+								<img src="/zone_b2b/images/ba_115.gif" width="2" height="29" alt="">
+							</td>
+							<td align="center" background="/zone_b2b/images/ba_116.gif">
+								<table width="96%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td width="5%">
+											<img src="/zone_b2b/images/zse.gif" width="5" height="9" />
+										</td>
+										<td width="78%" class="bthong">
+											latest join enterprises
+										</td>
+										<td width="17%">
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td width="2">
+								<img src="/zone_b2b/images/ba_117.gif" width="2" height="29" alt="">
+							</td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="FFC367">
+						<tr>
+							<td valign="top" bgcolor="#FFFFFF">
+								<table width="100%" height="120" border="0" align="center" cellpadding="0" cellspacing="0">
+									<tr>
+										<td valign="top">
+											<!--重复控制在12条-->
+											{#LatestEnterprise:12#}
+											<!--li>·江西旭晶玻璃有限公司试生产 <span class="zi">[生产型]</span></li-->
+										</td>
+									</tr>
+
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td valign="top">&nbsp;
+					
+				</td>
+				<td width="680" valign="top">
+					 
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td valign="top">
+							<img src="/zone_b2b/images/new_3.jpg">
+							</td>
+						</tr>
+					</table>
+					<table border=0 cellpadding=0 cellspacing=0 width="100%">
+						<tr>
+							<td width="134" height="32" align="center" background="/zone_b2b/images/sup_03.gif" class="bthong">
+								Categories
+							</td>
+							<td align="right" valign="bottom" background="/zone_b2b/images/sup_04.gif">
+								<table width="100%" border="0" cellspacing="1" cellpadding="0">
+									<tr>
+										<td width="95%" height="25">
+											&nbsp;&nbsp;
+										</td>
+										<td width="5%">
+											<img src="/zone_b2b/images/sup_08.gif" align="absmiddle">
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<table border="0" cellpadding="0" cellspacing="0" id="tbo1" style="display: none">
+						<tr>
+							<td>
+								<table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="FFC367">
+									<tr>
+										<td height="255" valign="top" bgcolor="FFFFFF">
+											<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+												<tr>
+													<td width="23%" height="30">
+														<img src="/zone_b2b/images/jiantou.gif" width="20" height="17">
+														<input type="submit" name="Submit2" value="Contrast products">
+													</td>
+													<td width="37%" class="STYLE2">
+														Latest Supply/Company
+													</td>
+													<td width="11%" class="STYLE2">
+														Prices(Yuan)
+													</td>
+													<td width="13%" class="STYLE2">
+														Location 
+													</td>
+													<td width="16%" class="STYLE2">
+														Message/Contact
+													</td>
+												</tr>
+												<tr>
+													<td height="1" class="xian"></td>
+													<td class="xian"></td>
+													<td class="xian"></td>
+													<td class="xian"></td>
+													<td class="xian"></td>
+												</tr>
+											</table>
+											<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+												<tr>
+													<td width="4%" height="30">
+														<input type="checkbox" name="checkbox" value="checkbox">
+													</td>
+													<td width="19%" height="130">
+														<img name="" src="supply.html" width="100" height="100" alt="" />
+													</td>
+													<td width="37%">
+														<a href="#" class="cpbt">Product Name</a> 2008-7-4
+														<br>
+														<a href="#" class="cp_list">Note contents ...</a>
+													</td>
+													<td width="11%">
+														￥50.00/Sets
+													</td>
+													<td width="13%">
+														 JIANGSU-Products
+													</td>
+													<td width="16%">
+														<img src="/zone_b2b/images/zx.gif" width="75" height="21">
+														<img src="/zone_b2b/images/msn.gif" width="16" height="16">
+													</td>
+												</tr>
+												<tr>
+													<td height="1" colspan="2" class="xian"></td>
+													<td class="xian"></td>
+													<td class="xian"></td>
+													<td class="xian"></td>
+													<td class="xian"></td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+								<table width="100%" border="0" cellpadding="0" cellspacing="0"0>
+									<tr>
+										<td height="10"></td>
+									</tr>
+								</table>
+								<table width="100%" border="0" cellpadding="1" cellspacing="1" bgcolor="E3E3E3">
+									<tr>
+										<td height="32" align="center" background="/zone_b2b/images/btt1.gif">
+											1 [2] [3] [4] [5] [6] [7] [8] [9] ... Next
+										</td>
+									</tr>
+								</table>
+								<table width="100%" border="0" cellpadding="0" cellspacing="0"0>
+									<tr>
+										<td height="10"></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellpadding="1" cellspacing="1" bgcolor="FFC367">
+						<tr>
+							<td height="255" valign="top" bgcolor="FFFFFF">
+								<table width="100%" border="0" cellspacing="0" cellpadding="8">
+									{#IndustryMarket#}
+									<!--tr>
+            <td width="50%" valign="top" bgcolor="EDF2F8">
+            	<a href="#" class="cpbt">建筑幕墙、门窗玻璃钢化玻璃</a><br>
+              <a href="#" class="news">中空玻璃 |</a> 
+              <a href="#" class="news">夹胶玻璃 | 夹层玻璃 | 防弹玻璃<br>
+                  防火玻璃 | 建筑玻璃 | 门窗玻璃 | 幕墙玻璃 <br>
+                  LOW-E玻璃 | 热弯玻璃 | 镀膜玻璃 </a></td>
+            <td width="50%" valign="top">
+            	<a href="#" class="cpbt">建筑幕墙、门窗玻璃钢化玻璃</a><br>
+              <a href="#" class="news">中空玻璃 |</a> 
+              <a href="#" class="news">夹胶玻璃 | 夹层玻璃 | 防弹玻璃<br>
+                  防火玻璃 | 建筑玻璃 | 门窗玻璃 | 幕墙玻璃 <br>
+                  LOW-E玻璃 | 热弯玻璃 | 镀膜玻璃 </a>
+            </td>
+          </tr>
+          <tr>
+            <td valign="top">&nbsp;</td>
+            <td valign="top" bgcolor="EDF2F8">&nbsp;</td>
+          </tr-->
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<center>
+		<!--#include file="footer.html"-->
+		{#include:bottom#}
+		</center>
+	</body>
+</html>

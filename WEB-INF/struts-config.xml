@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans >
+    <form-bean name="staffLoginForm" type="com.saas.struts.form.StaffLoginForm" />
+     <form-bean name="fileform" type="com.saas.struts.form.FileForm" />
+    <form-bean name="loginForm" type="com.saas.struts.form.LoginForm"/>
+    <form-bean name="iteminfoForm" type="com.saas.struts.form.IteminfoForm" />
+    <form-bean name="registerForm" type="com.saas.struts.form.RegisterForm"/>
+    <form-bean name="userloginForm" type="com.ahbay.struts.form.UserloginForm">
+            <form-property name="password" type="java.lang.String" />
+            <form-property name="uid" type="java.lang.String" />
+        </form-bean>
+        <form-bean name="menuinfoform" type="com.ahbay.struts.form.MenuinfoForm" />
+        <form-bean name="rightinfoform" type="com.ahbay.struts.form.RightinfoForm" />
+    </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+  	<action
+      name="loginForm"
+      path="/doCartTradeReg"
+      type="com.saas.struts.action.TradeRegAction" >
+      <forward name="succeed" path="/zone_b2c/transfer.jsp" />
+      <forward name="fail" path="/zone_b2b/b2c_content.jsp" />
+    </action>
+    <action
+      name="loginForm"
+      path="/stafflogin"
+      type="com.saas.struts.action.AutoLoginAction" >
+      <forward name="main" path="/main.jsp" />
+      <forward name="fail" path="/loginInfo.jsp" />
+    </action>
+    <action
+      name="iteminfoForm"
+      path="/addItemInfo"
+      type="com.saas.struts.action.TradeRegAction" >
+      <forward name="succeed" path="/www/manager/items/www_items_list_backfwd.jsp" />
+      <forward name="sessionEnded" path="/index.jsp" />
+    </action>
+    <action  
+            name="menuinfoform"
+            path="/addmenu"
+            type="com.ahbay.struts.action.AddmenuAction">
+             <forward name="succeed" path="success.jsp" />
+			 <forward name="fail" path="/fail.jsp" />
+			 <forward name="error" path="/error.jsp" />
+        </action> 
+        <action path="/uploadFile"
+           name="fileform"
+           type="com.saas.struts.action.TradeRegAction">
+            <forward name="succeed" path="/upSuccess.jsp" />
+          <forward name="fail" path="/upFail.jsp" />
+     </action>
+     <action
+      name="registerForm"
+      path="/register"
+      type="com.saas.struts.action.TradeRegAction">
+      <forward name="succeed" path="/main.jsp" />
+      <forward name="fail" path="/fail.jsp" />
+    </action>
+    <action
+      name="registerForm"
+      path="/tempregister"
+      type="com.saas.struts.action.TradeRegAction">
+      <forward name="succeed" path="/regsuccess.jsp" />
+      <forward name="fail" path="/fail.jsp" />
+    </action> 
+    <action
+      name="iteminfoForm"
+      path="/modifyItemInfo"
+      type="com.saas.struts.action.TradeRegAction" >
+      <forward name="succeed" path="/www/manager/items/www_items_list_backfwd.jsp" />
+      <forward name="sessionEnded" path="/index.jsp" />
+    </action>
+     <action  
+            name="menuinfoform"
+            path="/delmenu"
+            type="com.ahbay.struts.action.DelmenuAction">
+            <forward name="error" path="/error.jsp" />
+            <forward name="succeed" path="success.jsp" />
+			 <forward name="fail" path="/fail.jsp" />
+        </action> 
+      
+   <action path="/getmenulist"
+           name="staffLoginForm"
+           type="com.saas.struts.action.QueryTradeAction">
+           <forward name="sessionEnded" path="/tradeInfo.jsp" />
+           <forward name="QUERY_PAGE" path="/left.jsp" />
+   </action>
+   <action path="/getchildmenulist"
+           name="staffLoginForm"
+           type="com.saas.struts.action.QueryTradeAction">
+           <forward name="sessionEnded" path="/index.jsp" />
+           <forward name="QUERY_PAGE" path="/top.jsp" />
+   </action>
+   <action path="/getchildsubmenulist"
+           name="staffLoginForm"
+           type="com.saas.struts.action.QueryTradeAction">
+           <forward name="sessionEnded" path="/index.jsp" />
+           <forward name="QUERY_PAGE" path="/rigth_top.jsp" />
+   </action>
+   <action path="/gettradeinterface"
+           name="staffLoginForm"
+           type="com.saas.struts.action.QueryTradeAction">
+           <forward name="sessionEnded" path="/index.jsp" />
+           <forward name="QUERY_PAGE" path="/sys_interface_fwd.jsp" />
+   </action>
+   <action path="/getadditemlist"
+           name="staffLoginForm"
+           type="com.saas.struts.action.QueryTradeAction">
+           <forward name="sessionEnded" path="/index.jsp" />
+           <forward name="QUERY_PAGE" path="/www/manager/items/www_items_list.jsp" />
+   </action>
+   <action path="/getmodifyitemlist"
+           name="staffLoginForm"
+           type="com.saas.struts.action.QueryTradeAction">
+           <forward name="sessionEnded" path="/index.jsp" />
+           <forward name="QUERY_PAGE" path="/www/manager/items/www_modidyitems_list.jsp" />
+   </action>
+  <action  
+            name="staffinfoform"
+            path="/addstaff"
+            type="com.ahbay.struts.action.AddstaffAction">
+            <forward name="error" path="/error.jsp" />
+            <forward name="succeed" path="success.jsp" />
+			 <forward name="fail" path="/fail.jsp" />
+    </action>  
+   <action path="/getadditeminterf"
+           name="staffLoginForm"
+           type="com.saas.struts.action.QueryTradeAction">
+           <forward name="sessionEnded" path="/index.jsp" />
+           <forward name="QUERY_PAGE" path="/www/manager/items/www_additems_interf.jsp" />
+   </action>
+   <action path="/getmodifyiteminterf"
+           name="staffLoginForm"
+           type="com.saas.struts.action.QueryTradeAction">
+           <forward name="sessionEnded" path="/index.jsp" />
+           <forward name="QUERY_PAGE" path="/www/manager/items/www_modifyitems_interf.jsp" />
+   </action>
+   
+ 
+   <action path="/getTradeInterface"
+           name="staffLoginForm"
+           type="com.saas.struts.action.QueryTradeInterfAction">
+           <forward name="sessionEnded" path="/index.jsp" />
+           <forward name="QUERY_PAGE" path="/www/interface/getTradeInterf.jsp" />
+   </action>
+   <action path="/getQueryInterface"
+           name="staffLoginForm"
+           type="com.saas.struts.action.QueryTradeInterfAction">
+           <forward name="sessionEnded" path="/index.jsp" />
+           <forward name="QUERY_PAGE" path="/www/interface/getQueryInterf.jsp" />
+   </action>   
+   <action path="/doTradeReg"
+           name="staffLoginForm"
+           type="com.saas.struts.action.TradeRegAction">
+           <forward name="sessionEnded" path="/index.jsp" />
+           <forward name="succeed" path="/www/success.jsp" />
+           <forward name="fail" path="/www/fail.jsp" />
+   </action>
+   <action path="/doCustWebTradeReg"
+           name="staffLoginForm"
+           type="com.saas.struts.action.TradeRegAction">
+           <forward name="sessionEnded" path="/index.jsp" />
+           <forward name="succeed" path="/www/custWebSuccess.jsp" />
+           <forward name="fail" path="/www/fail.jsp" />
+   </action>
+   <action path="/doCustomerWebTradeReg"
+           name="staffLoginForm"
+           type="com.saas.struts.action.TradeRegAction">
+           <forward name="sessionEnded" path="/index.jsp" />
+           <forward name="succeed" path="/www/customerWebSuccess.jsp" />
+           <forward name="fail" path="/www/fail.jsp" />
+   </action>
+    <action path="/doOppWebTradeReg"
+           name="staffLoginForm"
+           type="com.saas.struts.action.TradeRegAction">
+           <forward name="sessionEnded" path="/index.jsp" />
+           <forward name="succeed" path="/www/oppWebSuccess.jsp" />
+           <forward name="fail" path="/www/fail.jsp" />
+   </action>
+   <action path="/doConWebTradeReg"
+           name="staffLoginForm"
+           type="com.saas.struts.action.TradeRegAction">
+           <forward name="sessionEnded" path="/index.jsp" />
+           <forward name="succeed" path="/www/conWebSuccess.jsp" />
+           <forward name="fail" path="/www/fail.jsp" />
+   </action>
+   <action path="/doTradeinterf"
+           name="staffLoginForm"
+           type="com.saas.struts.action.InterfTradeRegAction">
+           <forward name="sessionEnded" path="/index.jsp" />
+           <forward name="succeed" path="/www/isuccess.jsp" />
+           <forward name="fail" path="/www/fail.jsp" />
+   </action>
+   <action path="/doTradeServe"
+           name="staffLoginForm"
+           type="com.saas.struts.action.TradeRegAction">
+           <forward name="succeed" path="/severOK.jsp" />
+           <forward name="fail" path="/fail.jsp" />
+   </action>
+   <action path="/doTradeActive"
+           name="staffLoginForm"
+           type="com.saas.struts.action.TradeRegAction">
+           <forward name="succeed" path="/actived.jsp" />
+           <forward name="fail" path="/fail.jsp" />
+   </action>
+   <action path="/addFileinfo"
+           name="fileform"
+           type="com.saas.struts.action.TradeRegAction">
+           <forward name="sessionEnded" path="/index.jsp" />
+           <forward name="succeed" path="/www/uploadOk.jsp" />
+           <forward name="fail" path="/www/fail.jsp" />
+   </action>
+   <action path="/addfavinfo"
+           name="staffLoginForm"
+           type="com.saas.struts.action.TradeRegAction">
+           <forward name="sessionEnded" path="/index.jsp" />
+           <forward name="succeed" path="/addOk.jsp" />
+           <forward name="fail" path="/addfail.jsp" />
+   </action>
+   <action path="/getInfoInterface"
+           name="staffLoginForm"
+           type="com.saas.struts.action.QueryTradeInterfAction">
+           <forward name="sessionEnded" path="/index.jsp" />
+           <forward name="QUERY_PAGE" path="/www/interface/getTradeInfoInterf.jsp" />
+   </action>
+   <action path="/getDoTradeInterface"
+           name="staffLoginForm"
+           type="com.saas.struts.action.QueryTradeInterfAction">
+           <forward name="sessionEnded" path="/index.jsp" />
+           <forward name="QUERY_PAGE" path="/www/interface/getDoTradeInterf.jsp" />
+   </action>
+   
+   <action path="/getTradeQueryInterface"
+           name="staffLoginForm"
+           type="com.saas.struts.action.QueryTradeInterfAction">
+           <forward name="sessionEnded" path="/index.jsp" />
+           <forward name="QUERY_PAGE" path="/www/interface/getTradeQueryInterf.jsp" />
+   </action>
+   <action path="/queryTrade" type="com.saas.struts.action.QueryTradeAction" />
+   
+  </action-mappings>
+
+  <message-resources parameter="com.saas.struts.ApplicationResources" />
+  
+  <plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+  		<set-property property="contextConfigLocation" value="/WEB-INF/classes/applicationContext.xml"/>
+  </plug-in>
+</struts-config>
+

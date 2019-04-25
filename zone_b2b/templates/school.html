@@ -1,0 +1,292 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>{#webtitle#}</title>
+		<style type="text/css">
+		<!--
+		body {
+			margin-left: 0px;
+			margin-top: 0px;
+			margin-right: 0px;
+			margin-bottom: 0px;
+		}
+		-->
+		</style>
+		<link href="/zone_b2b/css/css.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="/js/prototype.js"></script>
+		<script type="text/javascript" src="/zone_b2b/school/school.js"></script>
+	</head>
+	<body>
+		{#include-top#}
+		<table width="980" border="0" align="center" cellpadding="4" cellspacing="1" bgcolor="DBECF4">
+			<tr>
+				<td height="26" valign="top" background="/zone_b2b/images/xian4.gif" bgcolor="#FFFFFF">
+					CurrentPosition: <!--您当前的位置:-->
+					<a href="/" class="lanse"><!--首页-->Home page </a>
+					<img src=/zone_b2b/images/lujian.gif border=0><!--玻璃学院-->GlassCollege
+				</td>
+			</tr>
+		</table>
+		<table width="980" height="10" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td></td>
+			</tr>
+		</table>
+		<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td width="235" valign="top">
+					<table width="220" border="0" cellpadding="0" cellspacing="1" bgcolor="DBECF4">
+						<tr>
+							<td height="166" valign="top" bgcolor="F5FAFC">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td width="21">
+											<img src="/zone_b2b/images/xueyuan_11.gif" width="21" height="30" alt="">
+										</td>
+										<td width="80" align="center" background="/zone_b2b/images/xueyuan_12.gif">
+											<span class="btlanse"><!--问题搜索-->problemsSearch</span>
+										</td>
+										<td width="23">
+											<img src="/zone_b2b/images/xueyuan_14.gif" width="23" height="30" alt="">
+										</td>
+										<td align="right"  background="/zone_b2b/images/xueyuan_15.gif">&nbsp;
+											
+										</td>
+									</tr>
+								</table>
+								<table width="100%" height="10" border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td></td>
+									</tr>
+								</table>
+								<table width="96%" border="0" align="center" cellpadding="4" cellspacing="0">
+
+									<tr>
+										<td>
+											<input name="key" id="key" type="text" class="0" value="input the key word" size="22" onMouseDown="this.value=''" onBlur="checkKey()">
+											<input type="submit" name="search" value="Search" onClick="searchCat()"><!--搜说-->
+										</td>
+									</tr>
+									<tr>
+										<td class="lanse_renceitop">
+											·<!--玻璃字典现收录有关玻璃方面的词汇量高达35000多条。-->Glass on glass dictionary is included in the vocabulary of up to over 35,000
+											<br>
+											·<!--输入的关键字越精确，则查到的资料就越精确。-->Enter the keyword more precise, more accurate information can be found in
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<table width="220" height="10" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td></td>
+						</tr>
+					</table>
+					<table width="220" border="0" cellpadding="0" cellspacing="1" bgcolor="DBECF4">
+						<tr>
+							<td height="222" valign="top" bgcolor="F5FAFC">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td width="21">
+											<img src="/zone_b2b/images/xueyuan_11.gif" width="21" height="30" alt="">
+										</td>
+										<td width="80" align="center" background="/zone_b2b/images/xueyuan_12.gif">
+											<span class="btlanse">knowledge of Glass</span>
+										</td>
+										<td width="23">
+											<img src="/zone_b2b/images/xueyuan_14.gif" width="23" height="30" alt="">
+										</td>
+										<td align="right" background="/zone_b2b/images/xueyuan_15.gif">
+											<a href="sch_knowlist.jsp?repository_type=4" class="lanse">more&gt;&gt;</a>&nbsp;
+										</td>
+									</tr>
+								</table>
+								<table width="100%" height="10" border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td></td>
+									</tr>
+								</table>
+								<table width="209" border="0" align="center" cellpadding="0" cellspacing="0">
+									{#repost-list-8#}
+								</table>
+							</td>
+						</tr>
+					</table>
+					<table width="220" height="10" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td></td>
+						</tr>
+					</table>
+					<table width="220" border="0" cellpadding="0" cellspacing="1" bgcolor="DBECF4">
+						<tr>
+							<td height="200" valign="top" bgcolor="F5FAFC">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td width="21">
+											<img src="/zone_b2b/images/xueyuan_11.gif" width="21" height="30" alt="">
+										</td>
+										<td width="80" align="center" background="/zone_b2b/images/xueyuan_12.gif">
+											<span class="btlanse">Sales experience</span>
+										</td>
+										<td width="23">
+											<img src="/zone_b2b/images/xueyuan_14.gif" width="23" height="30" alt="">
+										</td>
+										<td align="right" background="/zone_b2b/images/xueyuan_15.gif">
+											<a href="sch_knowlist.jsp?repository_type=2" class="lanse">more&gt;&gt;</a>&nbsp;
+										</td>
+									</tr>
+								</table>
+								<table width="100%" height="10" border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td></td>
+									</tr>
+								</table>
+								<table width="209" border="0" align="center" cellpadding="0" cellspacing="0">
+									{#sale-list-8#}
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td valign="top">
+					<table width="410" border="0" cellpadding="0" cellspacing="1" bgcolor="DBECF4">
+						<tr>
+							<td height="212" valign="top" bgcolor="#FFFFFF">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td width="21">
+											<img src="/zone_b2b/images/xy_11.gif" width="21" height="30" alt="">
+										</td>
+										<td width="80" align="center" background="/zone_b2b/images/xueyuan_12.gif">
+											<span class="btlanse"><!--玻璃图库-->Glass Gallery</span>
+										</td>
+										<td width="23">
+											<img src="/zone_b2b/images/xy_14.gif" width="23" height="30" alt="">
+										</td>
+										<td align="right" background="/zone_b2b/images/xy_15.gif">
+											<a href="sch_piclist.jsp" class="lanse">more&gt;&gt;</a>&nbsp;
+										</td>
+									</tr>
+								</table>
+								<table width="96%" height="5" border="0" align="center" cellpadding="0" cellspacing="0">
+									<tr>
+										<td></td>
+									</tr>
+								</table>
+								<table width="392" border="0" align="center" cellpadding="5" cellspacing="0">
+									{#glass-img-2#}
+								</table>
+							</td>
+						</tr>
+					</table>
+					<table width="220" height="10" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td></td>
+						</tr>
+					</table>
+					<table width="410" border="0" cellpadding="0" cellspacing="1" bgcolor="DBECF4">
+						<tr>
+							<td height="305" valign="top" bgcolor="#FFFFFF">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td width="21">
+											<img src="/zone_b2b/images/xy_11.gif" width="21" height="30" alt="">
+										</td>
+										<td width="80" align="center" background="/zone_b2b/images/xueyuan_12.gif">
+											<span class="btlanse"><!--技术成果-->Technological achievements</span>
+										</td>
+										<td width="23">
+											<img src="/zone_b2b/images/xy_14.gif" width="23" height="30" alt="">
+										</td>
+										<td align="right" background="/zone_b2b/images/xy_15.gif">
+											<a href="sch_knowlist.jsp?repository_type=3" class="lanse">more&gt;&gt;</a>&nbsp;
+										</td>
+									</tr>
+								</table>
+								<table width="96%" height="5" border="0" align="center" cellpadding="0" cellspacing="0">
+									<tr>
+										<td></td>
+									</tr>
+								</table>
+								<table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+									{#tech-list-13#}
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td width="320" valign="top">
+					<table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="DBECF4">
+						<tr>
+							<td height="300" valign="top" bgcolor="F5FAFC">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td width="21">
+											<img src="/zone_b2b/images/xueyuan_11.gif" width="21" height="30" alt="">
+										</td>
+										<td width="80" align="center" background="/zone_b2b/images/xueyuan_12.gif" class="btlanse">
+											wait for Solution
+										</td>
+										<td width="23">
+											<img src="/zone_b2b/images/xueyuan_14.gif" width="23" height="30" alt="">
+										</td>
+										<td align="right" background="/zone_b2b/images/xueyuan_15.gif">
+											<a href="sch_list.jsp" class="lanse">more&gt;&gt;</a>&nbsp;
+										</td>
+									</tr>
+								</table>
+								<table width="100%" height="10" border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td></td>
+									</tr>
+								</table>
+								<table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+									{#wait-list-13#}
+								</table>
+							</td>
+						</tr>
+					</table>
+					<table width="220" height="10" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td></td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="DBECF4">
+						<tr>
+							<td height="300" valign="top" bgcolor="F5FAFC">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td width="21">
+											<img src="/zone_b2b/images/xueyuan_11.gif" width="21" height="30" alt="">
+										</td>
+										<td width="80" align="center" background="/zone_b2b/images/xueyuan_12.gif" class="btlanse">
+											resolvedIssue
+										</td>
+										<td width="23">
+											<img src="/zone_b2b/images/xueyuan_14.gif" width="23" height="30" alt="">
+										</td>
+										<td align="right" background="/zone_b2b/images/xueyuan_15.gif">
+											<a href="solveList.jsp" class="lanse">more&gt;&gt;</a>&nbsp;
+										</td>
+									</tr>
+								</table>
+								<table width="100%" height="10" border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td></td>
+									</tr>
+								</table>
+								<table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+									{#aread-list13#}
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<center>
+		{#include-bottom#}
+		</center>
+	</body>
+</html>

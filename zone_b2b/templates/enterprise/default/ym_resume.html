@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{#WebTitle#}</title>
+<link href="/zone_b2b/templates/enterprise/default/css/new-ym-layout.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/prototype.js"></script>
+</head>
+
+<body>
+<table width="950" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+	   <div class="new-ym-header">
+	      <div class="new-ym-header4">
+	      	<a href="index.htm">公司介绍</a>&nbsp;&nbsp;&nbsp;
+	      	<a href="supply.htm">最新供应</a>&nbsp;&nbsp;&nbsp;
+	      	<a href="credit.htm">资质荣誉</a>&nbsp;&nbsp;&nbsp;
+	      	<a href="stock.htm">公司采购</a>&nbsp;&nbsp;&nbsp;
+	      	<a href="active.htm">公司动态</a>&nbsp;&nbsp;&nbsp;
+	      	<!--a href="bidding.htm" >公司招标</a-->
+	      	<a href="techo.htm">公司技术</a>&nbsp;&nbsp;&nbsp;
+	      	<a href="product.htm">公司产品</a>&nbsp;&nbsp;&nbsp;
+	      	<a href="resume.htm"  class="new-dh">招聘中心</a>&nbsp;&nbsp;&nbsp;
+	      	<a href="leavel.htm">客户留言</a>&nbsp;&nbsp;&nbsp;
+	      	 
+	      </div> 
+	   </div>
+	   <div class="new-ym-header1">
+	      <div class="new-ym-header2">{#cust:name#}<!--合肥网龙科技技术有限公司--></div>
+	   </div>
+	   <div class="new-ym-header3">
+	      <div class="new-ym-header5">目前位置：<a href="/">首页</a>&nbsp;-&gt;&nbsp;<a href="/zone_b2b/enterprise/customer/{#cust_id#}/resume.htm">招聘中心</a></div>
+	   </div>
+	</td>
+  </tr>
+  <tr>
+  <td valign="top" width="950">
+	   <div class="new-ym-left">
+	      <div class="new-ym-left1">
+		    <div class="new-ym-left2">
+			   <div class="new-ym-left4">
+			     联系方式
+			   </div>
+			</div>
+			<div class="new-ym-left3">
+			   <div class="new-ym-left5">
+			      <ol>
+				    <li>法人代表：{#juristic#}</li>			 
+						<li>邮箱：{#mail#}</li>
+						<li>电话：{#telephone#}</li>
+						<li>传真：{#fax#}</li>
+						<li>地址：{#address#}</li>
+						<li>邮编：{#postcode#}</li>
+						<li>网站地址：{#website#}</li>
+				  </ol>
+			   </div>
+			</div>
+		  </div>
+		  <div class="new-ym-left1">
+		    <div class="new-ym-left2">
+			   <div class="new-ym-left4">
+			     友情链接
+			   </div>
+			</div>
+			<div class="new-ym-left3">
+			   <div class="new-ym-left6">
+			      <ol>
+				    {#linker#}
+				  	</ol>
+			   </div>
+			</div>
+		  </div>
+	   </div>
+	   <div class="new-ym-right">
+	      <div class="new-ym-right1">
+		    <div class="new-ym-right2">
+			  <div class="new-ym-right4">公司简介</div>
+			</div>
+			<div class="new-ym-right3">
+			  <div class="new-ym-right5">
+			    <div class="new-ym-right7">
+			    	<img src="{#company_logo#}" width="140" height="130" />  
+			    </div>
+				<div class="new-ym-right8">
+					{#cust:scope#}
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="new-ym-right1">
+		    <div class="new-ym-right2">
+			  <div class="new-ym-right4">公司产品</div>
+			  <div class="new-ym-right6"><a href="/zone_b2b/enterprise/moreProduct.jsp?cust_id={#cust_id#}" name= "mapId" target="blank">更多>></a></div>
+			</div>
+			<div class="new-ym-right3">
+			  <div class="new-ym-right5">
+			       <table width="600" align="left" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:10px;">
+          <tr>
+						<td width="20%">
+							<div class="new-ym-right52">
+								<a href={#pic:link-1#}><img src="{#prod:pict-1#}" width="140" height="110" border="0"/></a>
+							</div>
+							<div class="new-ym-right51">
+								<a href={#prod:link-1#}>{#prod:title-1#}</a>
+							</div>
+						</td>
+						<td width="15"></td>
+						<td width="20%">
+							<div class="new-ym-right52">
+								<a href={#pic:link-2#}><img src="{#prod:pict-2#}" width="140" height="110" border="0"/></a>
+							</div>
+							<div class="new-ym-right51">
+								<a href={#prod:link-2#}>{#prod:title-2#}</a>
+							</div>
+						</td>
+						<td width="15"></td>
+						<td width="20%">
+							<div class="new-ym-right52">
+								<a href={#pic:link-3#}><img src="{#prod:pict-3#}" width="140" height="110" border="0"/></a>
+							</div>
+							<div class="new-ym-right51">
+								<a href={#prod:link-3#}>{#prod:title-3#}</a>
+							</div>
+						</td>
+						<td width="15"></td>
+						<td width="20%">
+							<div class="new-ym-right52">
+								<a href={#pic:link-4#}><img src="{#prod:pict-4#}" width="140" height="110" border="0"/></a>
+							</div>
+							<div class="new-ym-right51">
+								<a href={#prod:link-4#}>{#prod:title-4#}</a>
+							</div>
+						</td>
+			    </tr>
+			   </table>
+			    
+			  </div>
+			</div>
+		  </div>
+	   <div class="new-ym-right1">
+		    <div class="new-ym-right2">
+			  	  <div class="new-ym-right4">招聘中心</div>
+			  		<div class="new-ym-right6">&nbsp;<a href="/zone_b2b/job/jobinfo.jsp?cust_id={#cust_id#}"  target="blank">更多>></a></div>
+				</div>
+				
+				<div class="new-ym-right3">
+			  		<div class="new-ym-right9">
+							<div>
+								<div>
+								职位：<b><font size=2><a href="{#link-1#}">{#job:title-1#}</a></font></b><br>
+								工作地点：{#job:addr-1#}<br>
+								要求：{#job:request-1#}
+								</div>
+							</div><br>
+							<div>
+								<div>
+								职位：<b><font size=2><a href="{#link-2#}">{#job:title-2#}</a></font></b><br>
+								工作地点：{#job:addr-2#}<br>
+								要求：{#job:request-2#}
+								</div>
+							</div><br>
+							<div>
+								<div>
+								职位：<b><font size=2><a href="{#link-3#}">{#job:title-3#}</a></font></b><br>
+								工作地点：{#job:addr-3#}<br>
+								要求：{#job:request-3#}
+								</div>
+							</div><br>
+							<div>
+								<div>
+								职位：<b><font size=2><a href="{#link-4#}">{#job:title-4#}</a></font></b><br>
+								工作地点：{#job:addr-4#}<br>
+								要求：{#job:request-4#}
+								</div>
+							</div><br>
+							<div>
+								<div>
+								职位：<b><font size=2><a href="{#link-5#}">{#job:title-5#}</a></font></b><br>
+								工作地点：{#job:addr-5#}<br>
+								要求：{#job:request-5#}
+								</div>
+							</div><br>
+							<div>
+								<div>
+								职位：<b><font size=2><a href="{#link-6#}">{#job:title-6#}</a></font></b><br>
+								工作地点：{#job:addr-6#}<br>
+								要求：{#job:request-6#}
+								</div>
+							</div><br>
+							<div>
+								<div>
+								职位：<b><font size=2><a href="{#link-7#}">{#job:title-7#}</a></font></b><br>
+								工作地点：{#job:addr-7#}<br>
+								要求：{#job:request-7#}
+								</div>
+							</div><br>
+							<div>
+								<div>
+								职位：<b><font size=2><a href="{#link-8#}">{#job:title-8#}</a></font></b><br>
+								工作地点：{#job:addr-8#}<br>
+								要求：{#job:request-8#}
+								</div>
+							</div><br>
+							<div>
+								<div>
+								职位：<b><font size=2><a href="{#link-9#}">{#job:title-9#}</a></font></b><br>
+								工作地点：{#job:addr-9#}<br>
+								要求：{#job:request-9#}
+								</div>
+							</div><br>
+							<div>
+								<div>
+								职位：<b><font size=2><a href="{#link-0#}">{#job:title-0#}</a></font></b><br>
+								工作地点：{#job:addr-0#}<br>
+								要求：{#job:request-0#}
+								</div>
+							</div>
+			  	</div>
+				</div>   
+		  </div></div>  
+		 	
+	</td>
+  </tr>
+</table>
+<div class="moban-bottom">
+		  {#include:bottom#} 
+	  </div>
+</body>
+		
+</html>

@@ -1,0 +1,37 @@
+
+b2b.xsaas.com.en\addProductattrInfoMgr\addproattr.jsp
+电子商务平台
+产品分类选择：
+b2b.xsaas.com.en\addProductattrInfoMgr\addproattrIndex.jsp
+产品管理
+b2b.xsaas.com.en\addProductattrInfoMgr\modi_del_attr.jsp
+查看产品属性
+属性名称
+属性顺序
+默认值属性
+描述
+修改
+删除
+修改产品属性
+删除产品属性
+b2b.xsaas.com.en\addProductattrInfoMgr\modiattr.jsp
+电子商务平台
+属性名称：
+属性顺序：
+(只能输入0-9之间的数字)
+默认值：
+b2b.xsaas.com.en\addProductattrInfoMgr\modiproductattr.jsp
+电子商务平台
+产品分类选择：
+正在获取数据，请稍等...
+b2b.xsaas.com.en\addProductInfoMgr\addproduct.jsp
+产品管理
+产品分类名称：
+选择产品分类：
+是否有效 ：
+有效
+无效
+描述 ：
+备注 ：
+
+

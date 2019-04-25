@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link rel="stylesheet" type="text/css" href="/zone_b2b/css/oocl_css.css" />
+<script type="text/javascript" src="/zone_b2b/js/index.js"></script>
+<script type="text/javascript" src="/js/prototype.js"></script>
+<script language="JavaScript" src="/zone_b2b/js/link.js"></script>
+<title>{#webtitle#}</title>
+</head>
+<body>
+{#include-top#}
+<!--广告-->
+<div class="ad-980" style="clear:both;"><img src="/zone_b2b/images/en/en-oocl_06.gif" border="0" height="62"  width="980"/></div>
+
+<!--ah-->
+<div class="ad-980">
+   <!--left-->
+		<div class="oocl_left">
+				<!--01-->
+				<div class="oocl_llmt">
+						<div class="oocl_llmt1">Product list</div>
+						<div class="oocl_llmt2"><a href="/zone_b2b/calalogList.jsp?type=2&class_id=000000000000000">More</a></div>
+				</div>
+				<div class="oocl_llr">
+						<ul>	
+							{#Product-list:12#}
+							<!--
+							<li><a href="#" class="product_list">Processing glass</a> <span>(2021)</span></li>
+							<li><a href="#" class="product_list">Glasswork</a> <span>(635)</span></li>
+							<li><a href="#" class="product_list">Special glass</a> <span>(111)</span></li>
+							<li><a href="#" class="product_list">Flat glass</a> <span>(221)</span></li>
+							-->
+						</ul>
+				  <div class="oocl_llr1"> 
+								Want more inquiries?<br/>
+						        <a href="/zone_b2b/calalogList.jsp?type=2&class_id=000000000000000"><img src="/zone_b2b/images/en/en-oocl_01_29.gif" border="0" /></a> </div>
+				</div>
+				<!--02-->
+				<div class="oocl_llmt">
+						<div class="oocl_llmt1">Featured Partner</div>
+						<div class="oocl_llmt2"><a href="/zone_b2b/news/zixun_list.jsp?news_type=6Y8OmfjW0Grk17M">More</a></div>
+				</div>
+				<div class="oocl_llr2">
+						<ul>
+								<li><img src="/zone_b2b/images/en/en-oocl_36.gif" /></li>
+								<li><img src="/zone_b2b/images/en/en-oocl_40.gif" /></li>
+								<li><img src="/zone_b2b/images/en/en-oocl_42.gif" /></li>
+						</ul>
+				</div>
+				<div class="ad-200"><img src="/zone_b2b/images/en/en-oocl_44.gif" /></div>
+		</div>
+		
+		<!--中部-->
+		<div class="oocl_center">
+				<!--新闻图片-->
+				 <!--图片动画开始-->
+                            <div style="background:url() no-repeat">
+                            
+	<div>
+		<div id="hotImg">  
+		  <table  border="0" align="center" cellpadding="0" cellspacing="0">
+	  <!---->
+         <tr>
+              <td valign="top"><div id="fc" style="filter:progid:DXImageTransform.Microsoft.Fade ( duration=0.5,overlap=1.0 );">
+<div style="display:block;">
+
+
+<img src="/zone_b2b/images/en/en-oocl-1.gif" border="0" 
+onMouseOver="clearAuto();" onMouseOut="setAuto()" /></div>
+<div style="display:none;">
+
+
+<img src="/zone_b2b/images/en/en-oocl-2.gif" border="0" 
+onMouseOver="clearAuto();" onMouseOut="setAuto()" /></div>
+
+<div style="display:none;">
+
+<img src="/zone_b2b/images/en/en-oocl-3.gif" border="0" 
+onMouseOver="clearAuto();" onMouseOut="setAuto()" /></div>
+
+</div></td>
+            </tr>
+            <!---->
+            <!---->
+     <tr>
+              <td >
+              <table border="0" align="center" cellpadding="0" 
+                    cellspacing="3" id="num">
+                        <tr>
+                          <td><a href="#"><img src="/zone_b2b/images/en/newsb-01.gif" 
+                           onclick="Mea(0);" onmouseover="clearAuto();" 
+                          onmouseout="setAuto()" style="cursor:pointer;"/></a></td>
+                          <td><a href="#"><img src="/zone_b2b/images/en/newsb-02.gif" 
+                           onclick="Mea(1);" onmouseover="clearAuto();" 
+                          onmouseout="setAuto()" style="cursor:pointer;"/></a></td>
+                          <td><a href="#"><img src="/zone_b2b/images/en/newsb-03.gif"
+                           onclick="Mea(2);" onmouseover="clearAuto();"
+                           onmouseout="setAuto()" style="cursor:pointer;"/></a></td>
+                        </tr>
+                    </table></td>
+            </tr>
+            <!---->           
+</table>
+	<script> 
+var n=0;
+var showNum = document.getElementById("num");
+function Mea(value){
+	n=value;
+	setBg(value);
+	plays(value);
+	cons(value);
+	}
+function setBg(value){
+	for(var i=0;i<3;i++)
+   if(value==i){
+		showNum.getElementsByTagName("td")[i].className='bigon';
+		} 
+	else{	
+		showNum.getElementsByTagName("td")[i].className='bigoff';
+		}  
+	} 
+function plays(value){
+	try
+	{
+		with (fc)
+		{
+			filters[0].Apply();
+			for(i=0;i<3;i++)i==value?children[i].style.display="block":children[i].style.display="none"; 
+			filters[0].play(); 
+		}
+	}
+	catch(e)
+	{
+		var divlist = document.getElementById("fc").getElementsByTagName("div");
+		for(i=0;i<3;i++)
+		{
+			i==value?divlist[i].style.display="block":divlist[i].style.display="none";
+		}
+	}
+
+	
+}
+function cons(value){
+	try
+	{
+		with (con)
+		{
+				for(i=0;i<3;i++)i==value?children[i].style.display="block":children[i].style.display="none"; 		
+		}
+	}
+	catch(e)
+	{
+		var divlist = document.getElementById("con").getElementsByTagName("div");
+		for(i=0;i<3;i++)
+		{
+			i==value?divlist[i].style.display="block":divlist[i].style.display="none";
+		}		
+	}
+}
+
+function clearAuto(){clearInterval(autoStart)}
+function setAuto(){autoStart=setInterval("auto(n)", 800)}
+function auto(){
+	n++;
+	if(n>2)n=0;
+	Mea(n);
+} 
+function sub(){
+	n--;
+	if(n<0)n=2;
+	Mea(n);
+} 
+setAuto(); 
+
+</script>
+
+    </div></div></div>
+                         <!--图片动画结束--> 
+				<!--新闻列表-->
+				<div class="oocl_clmt">
+						<div class="oocl_clmt1">Latest Buying leads</div>
+				</div>
+				
+				<div class="oocl_clr2_0">
+						<div class="oocl_clr3">
+						<ul>	
+								{#Latest-Buying-leads:8#}
+								<!--  
+								<li><a href="#" class="news_list">Baby &amp; Children's Apparel</a></li>
+								<li><a href="#" class="news_list">Baby &amp; Children's Care Products</a></li>
+								<li><a href="#" class="news_list">Baby &amp; Children's Footwear</a></li>
+								<li><a href="#" class="news_list">Baby &amp; Children's Bedding &amp; Furniture</a></li>
+								<li><a href="#" class="news_list">Baby &amp; Children's Bags, Fashion Accessories &amp; Services</a></li>
+								-->
+						</ul>
+				 </div>
+				  <div class="oocl_clr4">
+				 
+				 <img src="/zone_b2b/images/ggao1.jpg" />
+				 <img src="/zone_b2b/images/ggao2.jpg" />
+				 </div>
+				 </div>
+				 <!--图片列表-->
+				<div class="oocl_clmt">
+						<div class="oocl_clmt1">Featured Products</div>
+				</div>
+				
+				<div class="oocl_clr2">
+						<ul>
+								{#Featured-Products:8#}
+								<!-- 
+								<li><img src="/zone_b2b/images/en/pic.gif" /><br/><a href="#">Glass door</a></li>
+								<li><img src="/zone_b2b/images/en/pic.gif" /><br/><a href="#">Glass door</a></li> 
+								-->
+						</ul>
+				 </div>
+				 
+				 
+				 
+				  <!--最新信息-->
+				<div class="oocl_clmt">
+						<div class="oocl_clmt1">Latest News</div>
+				</div>
+				
+				<div class="oocl_clr2_0">
+						<div class="oocl_clr3">
+							<div class="oocl_clr3_a">
+									{#news--1#}
+									<!--
+									<img src="/zone_b2b/images/en/en-01_75.gif" style="float:left;margin:6px 8px;"  /><a href="#"><b>DuPont Introduces New, 
+									Thinner SentryGlas</b></a><br /><span>DuPont Glass Laminating
+									Solutions announces 
+									commercial availability 
+									of new 35..<a href="#" class="hong-link">[More]</a></span>
+									-->
+							</div>
+							<ul>
+									{#news--2#}
+									<!--
+									<li><a href="#" class="news_list">Baby &amp; Children's Apparel</a></li>
+									<li><a href="#" class="news_list">Baby &amp; Children's Apparel</a></li>
+									<li><a href="#" class="news_list">Baby &amp; Children's Apparel</a></li>
+									<li><a href="#" class="news_list">Baby &amp; Children's Apparel</a></li>
+									-->
+							</ul>	
+						</div>
+						<div class="oocl_clr4">
+						<ul>
+								{#news--3#}
+								<!--
+								<li><a href="#" class="news_list">Baby &amp; Children's Apparel</a></li>
+								<li><a href="#" class="news_list">Baby &amp; Children's Care Products</a></li>
+								<li><a href="#" class="news_list">Baby &amp; Children's Footwear</a></li>
+								<li><a href="#" class="news_list">Baby &amp; Children's Bedding &amp; Furniture</a></li>
+								<li><a href="#" class="news_list">Baby &amp; Children's Bags</a></li>
+								<li><a href="#" class="news_list">Baby &amp; Children's Care Products</a></li>
+								<li><a href="#" class="news_list">Baby &amp; Children's Footwear</a></li>
+								<li><a href="#" class="news_list">Baby &amp; Children's Bedding &amp; Furniture</a></li>
+								<li><a href="#" class="news_list">Baby &amp; Children's Bags</a></li>
+								-->
+						</ul>
+				 </div>
+				 </div>
+		</div>
+		
+		
+		<!--right-->
+		<div class="oocl_right">
+				<div class="oocl_rlmt">
+					<div class="oocl_rlr1">
+						<ul>
+						  <li>
+						  		<span style="color:#CC0033;">Not Yet Registered?</span><br/>
+								Find millions of products, contact 
+								suppliers, gete-mail updates right here.
+								Register for FREE services.<br/>
+							    <a href="/Newcregister.jsp?class_level=4"><img src="/zone_b2b/images/en/en-oocl_16.gif" border="0" /></a>
+						  </li>
+						  <li>
+						  		<span style="color:#CC0033;">Already Registered?</span><br/>
+								Login now-get instant access to all of 
+								your Global Sources services.<br/>
+								<a href="/index.jsp"><img src="/zone_b2b/images/en/en-oocl_25.gif" border="0" /></a>
+						  </li>
+						</ul>
+					</div>
+				</div>
+				<!--02-->
+				<div class="oocl_rlmt">
+					<!--展会-->
+						<div class="oocl_rlr2">
+								<div class="oocl_rlmt1">Featured Trade Shows</div>
+								
+								<div class="oocl_rlr3">
+								<!--选项开始-->
+										<!--01-->
+										<div class="aa1" id="bo0">{#shows--1#}
+												<!-- 
+												<a href="#">Bangkok Gems</a><br/>
+												<img src="/zone_b2b/images/en/pic_0.gif"  style="float:left;margin:6px 8px;" /><a href="#">Timepieces, Jewelry, Eyewear</a><br/>
+												<span>11-15 Sep 2008<br/>[Thailand] </span>
+												-->
+										</div>
+										<!--02-->
+										<div class="aa1" id="bo1" style="display: none">{#shows--2#}
+												<!--
+												<a href="#">Jewelry Fair</a><br/>
+												<img src="/zone_b2b/images/en/pic_0.gif"  style="float:left;margin:6px 8px;" /><a href="#">Timepieces, Jewelry, Eyewear</a><br/>
+												<span>11-15 Sep 2008<br/>[Thailand] </span>
+												-->
+										</div>
+										<!--03-->
+										<div class="aa1" id="bo2" style="display: none">{#shows--3#}
+												<!--
+												<a href="#">Fair</a><br/>
+												<img src="/zone_b2b/images/en/pic_0.gif"  style="float:left;margin:6px 8px;" /><a href="#">Timepieces, Jewelry, Eyewear</a><br/>
+												<span>11-15 Sep 2008<br/>[Thailand] </span>
+												-->
+										</div>
+										<!--04-->
+										<div class="aa1"  id="bo3" style="display: none">{#shows--4#}
+												<!--
+												<a href="#">Gems & Jewelry Fair</a><br/>
+												<img src="/zone_b2b/images/en/pic_0.gif"  style="float:left;margin:6px 8px;" /><a href="#">Timepieces, Jewelry, Eyewear</a><br/>
+												<span>11-15 Sep 2008<br/>[Thailand] </span>
+												-->
+										</div>
+										<!--05-->
+										<div class="aa1"  id="bo4" style="display: none">{#shows--5#}
+												<!--
+												<a href="#">Jewelry Fair</a><br/>
+												<img src="/zone_b2b/images/en/pic_0.gif"  style="float:left;margin:6px 8px;" /><a href="#">Timepieces, Jewelry, Eyewear</a><br/>
+												<span>11-15 Sep 2008<br/>[Thailand] </span>
+												-->
+										</div>
+										<!--06-->
+										<div class="aa1"  id="bo5" style="display: none">{#shows--6#}
+												<!--
+												<a href="#">Bangkok Gems & Jewelry Fair</a><br/>
+												<img src="/zone_b2b/images/en/pic_0.gif"  style="float:left;margin:6px 8px;" /><a href="#">Timepieces, Jewelry, Eyewear</a><br/>
+												<span>11-15 Sep 2008<br/>[Thailand] </span>
+												-->
+										</div>
+										
+										<ul>
+												<li class="a1" id="d0" onmouseover="javascript:secBoard(0)">1</li>
+												<li class="a2" id="d1" onmouseover="javascript:secBoard(1)">2</li>
+												<li class="a2" id="d2" onmouseover="javascript:secBoard(2)">3</li>
+												<li class="a2" id="d3" onmouseover="javascript:secBoard(3)">4</li>
+												<li class="a2" id="d4" onmouseover="javascript:secBoard(4)">5</li>
+												<li class="a2" id="d5" onmouseover="javascript:secBoard(5)">6</li>
+												
+										</ul>
+								<!--选项结束-->
+<script language=javascript>
+function secBoard(n)
+{
+	for(i=0;i<6;i++) {
+		if (i==n) {
+			document.all('d' + n).className="a1";
+		} else {
+		document.all('d' + i).className="a2";}
+	}
+	
+	for(i=0;i<6;i++) {
+		if (i==n) {
+			document.all('bo' + n).style.display="";
+		} else {
+		document.all('bo' + i).style.display="none";}
+	}
+	
+}
+</script>						
+								</div><div class="more" style="float:right;"><a href="/zone_b2b/news/zixun_list.jsp?news_type=4N425Mtvp85470g">More</a></div>
+						</div>
+						<!--成功案例-->
+						<div class="oocl_rlmt2"> &nbsp;&nbsp;&nbsp;Success Stories</div>
+						<div class="oocl_rlr2">
+								
+								<div class="oocl_rlr3_0">
+										<ul>
+											{#Success-Stories:1#}
+											<!--
+											<li>
+												<img src="/zone_b2b/images/en/en-oocl_33.gif" style="float:left;margin:6px 8px;" />
+												<a href="#">I get more business because of the extra confidence customers have when ...</a><br/>
+								 		    </li>
+											<li > <span>Mr. Basit Yosuf<br/>[Pakistan]<br/><br/>
+												My company is an apparel sourcing 
+												agent based in Karachi, Pakistan, 
+												providing services related to 
+												manufacturing apparel for all genders 
+												and ages...</span>
+											</li>
+											<li><div class="more"><a href="#">More</a></div></li>
+											-->
+										</ul>
+								</div>
+						</div>
+						
+				</div>
+				<div class="oocl_rlmt3">
+						<div class="oocl_rlmt3_0">Service center</div>
+						<div class="oocl_rlmt3_more"><a href="#">More</a></div>
+				</div>
+				<div class="oocl_rlr4">
+						<img src="/zone_b2b/images/en/en-oocl_53.gif" />
+				</div>
+		
+		
+		</div>
+
+</div>
+<!--底部-->
+<center>
+{#include-bottom#}
+</center>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>XSaaS——软件</title>
+<link href="css/layout.css" rel="stylesheet" type="text/css" />
+<script type='text/javascript'
+			src='<%=request.getContextPath()%>/dwr/engine.js'></script>
+		<script type='text/javascript'
+			src='<%=request.getContextPath()%>/dwr/util.js'></script>
+<script type="text/javascript">
+   function checkInfo(){
+    if(document.getElementById("v_rcvaddr").value==""){
+      alert("地址不能为空！");
+      document.getElementById("v_rcvaddr").focus();
+      return false;
+    }   
+    if(document.getElementById("v_rcvtel").value==""){
+      alert("电话不能为空！");
+      document.getElementById("v_rcvtel").focus();
+      return false;
+    }  
+    if(document.getElementById("v_orderemail").value==""){
+      alert("邮件地址不能为空！");
+      document.getElementById("v_orderemail").focus();
+      return false;
+    }else {
+      var regexp=/^[a-zA-Z0-9_]{2,25}[@][a-zA-z0-9-]{1,100}[.]([a-zA-Z]{2,4}|[a-zA-Z]{2,4}[.][a-zA-Z]{2})$/g;
+      if(!regexp.test(document.getElementById("v_orderemail").value)){
+         alert("请输入合法的邮件地址！");
+         document.getElementById("v_orderemail").focus();
+        return false;
+      }
+    }  
+    sumInfo();
+    var sums=parseFloat(document.getElementById("v_amount").value);
+    if(parseFloat(sums)==0.0){
+      alert("请选择你订购的服务！");
+      return false;
+    }
+    return true;
+   }
+   function sumInfo(){
+      var timeArray =new Array();
+      	timeArray[1]=document.getElementById("b2b").value;
+      	timeArray[2]=document.getElementById("com").value;
+      	timeArray[3]=document.getElementById("oa").value;
+      	timeArray[4]=document.getElementById("bss").value;
+      	timeArray[5]=document.getElementById("hrm").value;
+      	timeArray[6]=document.getElementById("crm").value;
+      var nameArray =new Array();
+      	nameArray[1]="b2b";
+      	nameArray[2]="com";
+      	nameArray[3]="oa";
+      	nameArray[4]="bss";
+      	nameArray[5]="hrm";
+      	nameArray[6]="crm";
+      var sum="0.0",name="";
+      for(var i=1;i<7;i++){
+        var id="check"+i;
+        var sev="sev"+i;
+        if(document.getElementById(id).checked){
+           sum=parseFloat(sum)+(parseFloat(document.getElementById(sev).value)*timeArray[i]);
+           name=name+nameArray[i]+"|";
+        }
+      }   
+      document.getElementById("v_amount").value=sum;
+      document.getElementById("server_name").value=name;
+   }
+</script>
+</head>
+
+<body>
+<table width="760" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top">
+	<!--头部信息-->
+	    <!--iframe src="top.html" height="111px" width="100%" frameborder="0"></iframe-->
+		<div class="container">
+	      <div class="header">
+		    <div class="headerleft"><img src="images/logo.gif" width="332" height="43" /></div>
+			<div class="headerright">
+			  <div class="headerright1">您好！请<a href="#">登陆</a>&nbsp;&nbsp;或&nbsp;&nbsp;<a href="#">注册</a></div>
+			  <div class="headerright2" style="color:#ccc;">soft.xsaas.com是xsaas集团网站群下的软件服务提供商门户</div>
+			</div>
+		  </div>
+		  <div class="header">
+		    <div class="header-dh">
+			    <a class="header-dh2" href="index.html">首页</a>
+				<a class="header-dh1" href="rjzx.html">软件中心</a>
+				<a class="header-dh2" href="qdjm.html">渠道加盟</a>
+				<!--a class="header-dh2" href="bzzx.html">帮助中心</a-->
+				<a class="header-dh2" href="index.jsp" target="_blank">登录系统</a>			 </div>
+		  </div>
+	   </div>
+    <!--头部结束-->
+	</td>
+  </tr>
+  <tr>
+    <td valign="top">
+	<!--中间信息-->
+	   <div class="containermid">
+	     <div class="mid"><img src="images/rjbanner.gif" width="760" height="100" /></div>
+         <div class="mid">
+	       <div style="width:760px; height:250px;">
+		        <form name=formbill action=/doTradeServe.do method="post">
+<TABLE cellSpacing=0 cellPadding=0 width=760 align=center bgColor=#666666 border=0>
+      
+    <TBODY>
+      <TR> 
+        <TD bgColor=#ffffff> <TABLE cellSpacing=0 cellPadding=2 width=750 bgColor=#666666 border=0>
+            <TBODY>
+              <TR> 
+                <TD width="480" bgColor=#ffffff><B>请选择要订购的服务：</B>
+                  <table width="760" cellpadding="4" cellspacing="1" align="center" bordercolor="#000000" >
+                    <TBODY>
+					  <TR> 
+                        <TD height=23 align=right>网上办公系统【服务】：</TD>
+                        <TD height=23 align=left>50(元/月)
+                           订购<input type="hidden" name="sev3" id="sev3" value="50"><input type="text" name="oa" value="1" id="oa" size="5" onkeyup="if(isNaN(value))execCommand('undo')" onblur="sumInfo()">月</TD>
+                      </TR>
+                      <TR> 
+                        <TD height=23 align=right>订购人姓名：</TD>
+                        <TD height=23 ><input name="v_rcvname" type="text" value="<%=cust_name%>" readonly>
+                          &nbsp;&nbsp; <font color="#FF0000">//</font>总长不超过80字符</TD>
+                      </TR>
+                      <TR> 
+                        <TD align=right height=23>订购人地址：</TD>
+                        <TD height=23><input name="v_rcvaddr" type="text" id="v_rcvaddr"  value="">
+                          &nbsp;&nbsp; <font color="#FF0000">//</font>总长不超过200个字符</TD>
+                      </TR>
+                      <TR> 
+                        <TD align=right height=23>订购人电话：</TD>
+                        <TD height=23><input name="v_rcvtel" type="text" id="v_rcvtel"  value="">
+                          &nbsp;&nbsp; <font color="#FF0000">//</font>总长不超过50个字符</TD>
+                      </TR>
+                      <TR>
+                        <TD align=right height=23>订购人邮件：</TD>
+                        <TD height=23><input name="v_orderemail" type="text" id="v_orderemail" value="">
+                          &nbsp;&nbsp; <font color="#FF0000">//</font>总长不超过100个字符</TD>
+                      </TR>
+                      <TR>
+                        <TD align=right height=24>服务所需总金额（元）：</TD>
+                        <TD height=24><input name="v_amount" id="v_amount" type=text value="0.00" readonly onkeyup="if(isNaN(value))execCommand('undo')">
+                         </TD>
+                      </TR>
+                      <input name="v_oid" type="hidden" maxlength="64" value="<%=server_id%>"/>
+                      <input name="v_rcvemail" type="hidden" maxlength="64" value="sj@wanglong.cc"/>
+                      <input name="cust_id" type="hidden" maxlength="64" value="<%=cust_id%>"/>
+                      <input name="server_name" type="hidden" id="server_name" maxlength="64" value=""/>
+                      <input name="trade_type_code" type="hidden" id="trade_type_code" value="1027"/>
+                      <TR id="comit"> 
+                        <TD align=right height=24>&nbsp;</TD>
+                        <TD valign="top"><input type="submit" name="Submit" value=" 确认 " onclick="return checkInfo()"></TD>
+                      </TR>
+                  </TABLE>
+                </TD>
+              </TR>
+            </TBODY>
+          </TABLE>
+        </TD>
+      </TR>
+  </TBODY>
+</TABLE>
+ </FORM>
+		   </div>
+         </div>
+	   </div>
+    <!--中间结束--> 
+	</td>
+  </tr>
+  <tr>
+    <td valign="top">
+	   <!--底部信息-->
+	      <div class="containerbottom">
+		     <div class="footer">Copyright&nbsp;&nbsp;&copy;&nbsp;合肥网龙科技信息技术有限公司&nbsp;2004-2007&nbsp;SOFT.XSAAS.COM&nbsp;All&nbsp;Rights&nbsp;Reserved<BR />
+		       未经授权禁止复制或建立镜像增值电信业务经营许可证编号：皖B2-20040042&nbsp;文网文：【2005】027号</div>
+		  </div>
+       <!--底部结束-->
+	</td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,9 @@
+/* Hack pour un scroll sans sautillements */
+html {
+	background : url(null) fixed no-repeat;
+}
+/* Hack pour emuler la position fixed */
+#magicbox{
+	position: relative;
+	top: expression(fixed_bottom(this,0));
+}

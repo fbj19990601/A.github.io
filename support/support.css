@@ -1,0 +1,132 @@
+.navcd {
+	background-image: url(images/navbg.gif);
+	height: 75px;
+	width: 932px;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 14px;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+}
+.navCurrent {
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+	background-image: url(images/navCurrent.gif);
+	height: 28px;
+	width: 117px;
+	text-align: center;
+	background-repeat: no-repeat;
+}
+.navhover {
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+	height: 24px;
+	width: 117px;
+	text-align: center;
+}
+
+.navhover A:link {
+	TEXT-DECORATION: none;
+	color: #ffffff;
+}
+.navhover A:visited {
+COLOR: #ffffff; TEXT-DECORATION: none
+}
+.navhover A:hover {
+	TEXT-DECORATION: none;
+	color: #FFFF00;
+}
+.kuang950 {
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #C9E0E9;
+	border-bottom-color: #C9E0E9;
+	border-left-color: #C9E0E9;
+	width: 950px;
+	margin-right: auto;
+	margin-left: auto;
+
+	padding: 10px;
+	margin-bottom: 30px;
+}
+.mainkuang950 {
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #C9E0E9;
+	border-bottom-color: #C9E0E9;
+	border-left-color: #C9E0E9;
+	width: 950px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(images/top_bg.gif);
+	padding: 10px;
+	margin-bottom: 30px;
+}
+.mainwz {
+	font-size: 14px;
+	line-height: 180%;
+	color: #666666;
+}
+
+
+.font12 {
+	font-size: 12px;
+	line-height: 180%;
+	color: #666666;
+}
+.title14 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #3366CC;
+	text-align: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.title12 {
+	font-size: 12px;
+	font-weight: bold;
+	color: #3366CC;
+	text-align: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+
+.tishi {
+	font-size: 12px;
+	line-height: 120%;
+	color: #999999;
+}
+.question20 {
+	font-size: 16px;
+	font-weight: bold;
+	height: 30px;
+	padding-bottom: 10px;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #CCCCCC;
+	text-align: center;
+	padding-top: 10px;
+	color: #1764BC;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.close {
+	height: 30px;
+	border-top-width: 1px;
+	border-top-style: dashed;
+	border-top-color: #CCCCCC;
+	line-height: 160%;
+	padding-top: 7px;
+	color: #999999;
+}

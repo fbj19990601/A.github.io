@@ -1,0 +1,286 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html"%>
+<%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic"%>
+<%@ taglib uri="/WEB-INF/struts-bean.tld" prefix="bean"%>
+<%@ page import="java.util.*"%>
+<%@ page contentType="text/html;charset=GBK"%>
+<%@ page import="com.saas.biz.commen.ParamethodMgr"%>
+<jsp:useBean id="bean" class="com.saas.biz.commodityMgr.CommodityInfo" scope="page"/>
+<%
+    String commodity_id="",cust_id="";
+    String commodity_name="",commodity_unit="",sale_market="",content="",commodity_brand="",commodity_price="",sale_price="";
+    if (request.getParameter("commodity_id") != null)
+    {
+        commodity_id = request.getParameter("commodity_id");
+        ArrayList commList=new ArrayList();
+        commList=bean.genCommodityList(commodity_id);
+        if(commList != null && commList.size()>0)
+        {
+            HashMap map=(HashMap)commList.get(0);
+             if(map.get("commodity_name")!=null)
+             {
+               commodity_name=map.get("commodity_name").toString();
+             }
+			if(map.get("commodity_unit")!=null)
+			{
+			  commodity_unit=map.get("commodity_unit").toString();
+			}
+			if(map.get("sale_market")!=null)
+			{
+			  sale_market=map.get("sale_market").toString();
+			}
+			if(map.get("content")!=null)
+			{
+			   content=map.get("content").toString();
+			}
+			if(map.get("commodity_brand")!=null)
+			{
+			   commodity_brand=map.get("commodity_brand").toString();
+			}
+			if(map.get("commodity_price")!=null)
+			{
+			   commodity_price=map.get("commodity_price").toString();
+			}
+			if(map.get("sale_price")!=null)
+			{
+			   sale_price=map.get("sale_price").toString();
+			}
+        }
+    }
+     ParamethodMgr paramCom=new ParamethodMgr();
+	ArrayList  webList =paramCom.getCompareInfo("CRM","web_id");
+	ArrayList  comTypeList=paramCom.getCompareInfo("CRM","commodity_type");
+%>
+<html>
+<head>
+<title>B2B EC-platform</title>
+<link href="/style/layout.css" rel="stylesheet" type="text/css">
+
+<script language="JavaScript" src="/www/fuction/public.js"></script>
+<script src="/www/fuction/calendar.js" type="text/javascript"></script>
+<script language="JavaScript">
+	function Check_Value()
+	{
+	    if (cTrim(document.form1.commodity_name.value,0) == "" || document.form1.commodity_name.value == null) 
+		{                                                                                         
+			alert("Trade names can not be empty!");                                                             
+			document.form1.commodity_name.focus();                                                    
+			return false;                                                                            
+		}                                                                                      
+		if (cTrim(document.form1.commodity_unit.value,0) == "" || document.form1.commodity_unit.value == null) 
+		{                                                                                         
+			alert("Denominated in units can not be empty!");                                                             
+			document.form1.commodity_unit.focus();                                                    
+			return false;                                                                            
+		}                                                                                        
+		if (cTrim(document.form1.sale_market.value,0) == "" || document.form1.sale_market.value == null) 
+		{                                                                                         
+			alert("Location can not be empty!");                                                             
+			document.form1.sale_market.focus();                                                    
+			return false;                                                                            
+		}                                                                                      
+		if (cTrim(document.form1.commodity_type.value,0) == "" || document.form1.commodity_type.value == null) 
+		{                                                                                         
+			alert("Categories can not be empty!");                                                             
+			document.form1.commodity_type.focus();                                                    
+			return false;                                                                            
+		}                                                                                      
+		if (content.getText()=="" || document.form1.content.value == null) 
+		{                                                                                         
+			alert("That can not be empty!");                                                             
+			document.form1.content.focus();                                                    
+			return false;                                                                            
+		}                                                                                      
+		if (cTrim(document.form1.commodity_brand.value,0) == "" || document.form1.commodity_brand.value == null) 
+		{                                                                                         
+			alert("Brand can not be empty!");                                                             
+			document.form1.commodity_brand.focus();                                                    
+			return false;                                                                            
+		}                                                                                        
+		if (cTrim(document.form1.commodity_price.value,0) == "" || document.form1.commodity_price.value == null) 
+		{                                                                                         
+			alert("Price should not be empty!");                                                             
+			document.form1.commodity_price.focus();                                                    
+			return false;                                                                            
+		} 
+		 else if(! isNum(document.form1.commodity_price.value))
+		{
+			alert("Please enter the correct figure!");
+			document.form1.commodity_price.focus(); 
+			return false;
+		}
+		if (cTrim(document.form1.sale_price.value,0) == "" || document.form1.sale_price.value == null) 
+		{                                                                                         
+			alert("Prices can not be empty!");                                                             
+			document.form1.sale_price.focus();                                                    
+			return false;                                                                            
+		}
+		else if(! isNum(document.form1.sale_price.value))
+		{
+			alert("Please enter the correct figure!");
+			document.form1.sale_price.focus(); 
+			return false;
+		}                                                                                                   
+		if (cTrim(document.form1.trade_type_code.value,0) == "" || document.form1.trade_type_code.value == null) 
+		{                                                                                         
+			alert("TRADE_TYPE_CODE can not be empty!");                                                             
+			document.form1.trade_type_code.focus();                                                    
+			return false;                                                                            
+		}                                                                                     
+		if (cTrim(document.form1.price_type.value,0) == "" || document.form1.price_type.value == null) 
+		{                                                                                         
+			alert("Price type can not be empty!");                                                             
+			document.form1.price_type.focus();                                                    
+			return false;                                                                            
+		}                                                                                       
+	 	    return true;
+	}
+     function check_none(current_obj)
+    {
+            if (current_obj.advshow.checked)
+            {
+        	    current_obj.submit1.disabled=false;        	     
+        	}
+        	else
+        	{
+        	    current_obj.submit1.disabled=true;
+        	}
+    	}
+    	function exit()
+    	{
+    	    window.close();
+    	}
+    	function confirmsub(formobj)
+    	{
+    	    if(window.confirm('Determined to be submitted£¿')) 
+    	    {
+    	        if (!Check_Value())
+    	        {
+    	             return;
+    	        }    	            	           
+    	        formobj.submit();    	         
+    	    }
+    	    else
+    	    {
+    	        return;
+    	    }
+    	}
+    	function   isNum(str)
+	{   
+	  return   (str.search(/^\d+(\.\d+)?$/)!=-1);   
+	}   
+</script>
+</head>
+<body>
+<table width="818" border="0" cellspacing="0" cellpadding="0" align="center">
+ <tr>
+	    <td height="26" background="/img/bg-1.gif">&nbsp;</td>
+	  </tr>
+	  <tr>
+	    <td background="/img/bg-2.gif">
+         <table  width="93%" border="0" cellpadding="5" cellspacing="1" align="center" bgcolor="#dddddd">
+         <form name=form1 action=/doTradeReg.do method=post target="blank">
+		  <tr>    
+            <td  class="line1" align="left" colspan="2"><bean:message key="str766"/>
+            </td>
+          </tr>          
+		  <tr>
+           <td  style="background-color:#f6f6f6; color:#000000;  font-weight:bold; font-size:13px;" align="right"><bean:message key="str951"/></td>
+           <td  style="background-color:#ffffff; color:#000000;  font-size:12px;" align=left><input type=text name=commodity_name value="<%=commodity_name%>"></td>
+         </tr>
+           <input name=commodity_id type=hidden value="<%=commodity_id%>">
+           <input type=hidden name=reattach_tag value="0">
+         <tr>
+          <td  style="background-color:#f6f6f6; color:#000000;  font-weight:bold; font-size:13px;" align="right"><bean:message key="str952"/></td>
+         <td  style="background-color:#ffffff; color:#000000;  font-size:12px;" align=left><input type=text name=commodity_unit value="<%=commodity_unit%>"></td>
+       </tr>
+       <tr>
+         <td  style="background-color:#f6f6f6; color:#000000;  font-weight:bold; font-size:13px;" align="right"><bean:message key="str953"/></td>
+         <td  style="background-color:#ffffff; color:#000000;  font-size:12px;" align=left><input type=text name=sale_market value="<%=sale_market%>"></td>
+       </tr>
+       <tr>
+        <td  style="background-color:#f6f6f6; color:#000000;  font-weight:bold; font-size:13px;" align="right"><bean:message key="str954"/></td>
+        <td  style="background-color:#ffffff; color:#000000;  font-size:12px;" align=left>
+      	<select name=web_id>
+              <%
+					if(webList != null && webList.size()>0)
+					{
+						for(int i=0;i<webList.size();i++)
+						{
+							HashMap map=(HashMap)webList.get(i);
+							String value=map.get("para_code1").toString();
+							String name=map.get("para_code2").toString();
+							%>
+                               <option value="<%= value %>"><%= name %></option>
+                               <%
+						}
+					} %>
+        </select>
+         </td>
+       </tr>
+       <tr>
+         <td  style="background-color:#f6f6f6; color:#000000;  font-weight:bold; font-size:13px;" align="right"><bean:message key="str955"/></td>
+         <td  style="background-color:#ffffff; color:#000000;  font-size:12px;" align=left><select name=commodity_type>
+               <%
+					if(comTypeList != null && comTypeList.size()>0)
+					{
+						for(int i=0;i<comTypeList.size();i++)
+						{
+							HashMap map=(HashMap)comTypeList.get(i);
+							String value=map.get("para_code1").toString();
+							String name=map.get("para_code2").toString();
+							%>
+                               <option value="<%= value %>"><%= name %></option>
+                               <%
+						}
+					} %>
+        </select>
+        </td>
+      </tr>
+      <tr>
+        <td  style="background-color:#f6f6f6; color:#000000;  font-weight:bold; font-size:13px;" align="right" valign="top"><bean:message key="str956"/></td>
+        <td  style="background-color:#ffffff; color:#000000;  font-size:12px;" align=left><textarea name=content style=display:none><%=content%></textarea>
+         <iframe id="content" src="/www/ewebeditor/ewebeditor.htm?id=content&style=coolblue&root_id=<%=commodity_id%>" frameborder=0 scrolling=no width=600 height=350></iframe>  
+        </td>
+      </tr>
+      <tr>
+        <td  style="background-color:#f6f6f6; color:#000000;  font-weight:bold; font-size:13px;" align="right"><bean:message key="str957"/></td>
+        <td  style="background-color:#ffffff; color:#000000;  font-size:12px;" align=left><input type=text name=commodity_brand value="<%=commodity_brand%>"></td>
+      </tr>
+      <tr>
+        <td  style="background-color:#f6f6f6; color:#000000;  font-weight:bold; font-size:13px;" align="right"><bean:message key="str958"/></td>
+        <td  style="background-color:#ffffff; color:#000000;  font-size:12px;" align=left><input type=text name=commodity_price value="<%=commodity_price%>"></td>
+      </tr>
+      <tr>
+        <td  style="background-color:#f6f6f6; color:#000000;  font-weight:bold; font-size:13px;" align="right"><bean:message key="str959"/></td>
+        <td  style="background-color:#ffffff; color:#000000;  font-size:12px;" align=left><input type=text name=sale_price value="<%=sale_price%>">
+		<input type=hidden name=trade_type_code value=0312></td>
+      </tr>
+      <tr>
+        <td  style="background-color:#f6f6f6; color:#000000;  font-weight:bold; font-size:13px;" align="right"><bean:message key="str960"/></td>
+        <td  style="background-color:#ffffff; color:#000000;  font-size:12px;" align=left><select name=price_type>
+          <option value=0><bean:message key="str961"/></option>
+          <option value=1><bean:message key="str962"/></option>
+        </select></td>
+      </tr>
+      <tr>
+        <input type=hidden name=rsrv_num1 value=0>
+        <td class=grayE colspan=2 align="center"><INPUT id=advcheck name=advshow type=checkbox value=0 onclick=check_none(form1)>
+         <bean:message key="str963"/>
+        </td>
+      </tr>
+      <tr>
+        <td   style="background-color:#f6f6f6; color:#000000;  font-weight:bold; font-size:13px;padding-top:10px;padding-bottom:10px;"  align=center colspan=2><input name=submit1 type=button value=Determined disabled=true onclick=confirmsub(form1)>
+        <input name=button1 type=button value=Cancel onclick=exit()></td>
+      </tr>
+    </form>
+  </table>
+  	     </td>
+	  </tr>
+	  <tr>
+	    <td height="46" background="/img/bg-3.gif">&nbsp;</td>
+	  </tr>
+</table>
+</body>
+</html>

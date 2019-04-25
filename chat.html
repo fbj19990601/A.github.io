@@ -1,0 +1,103 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=BIG5" />
+<title></title>
+<script type="text/javascript">
+var HttpRequest;
+var url = "/ChatRoomServlet";
+function getRequest(){
+    if(window.XMLHttpRequest){
+        return(new XMLHttpRequest());
+    }else if(window.ActiveXObject){
+        try{
+            return(new ActiveXObject("Msxm12.XMLHTTP"));
+        }catch(e){
+            try{
+                return(new ActiveXObject("Microsoft.XMLHTTP"));
+            }catch(e){}
+        }
+    }
+}
+function sendRequest(){
+    if(document.getElementById("txtMessage").value.length<=0){
+        return false;
+    }
+    HttpRequest = getRequest();
+    
+    //HttpRequest.onreadystatechange = getMessage;
+    HttpRequest.open("POST", url, true);
+    HttpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    var msg;
+    msg = "Action=AddMessage&Message=" + document.getElementById("txtMessage").value;
+    HttpRequest.send(msg);
+    document.getElementById("txtMessage").value = "";
+    //document.getElementById("txtMessage").focus();
+}
+function DisplayMessage(){
+    if(HttpRequest.readyState == 4 && HttpRequest.status == 200){
+        //alert("abd");
+        //alert(HttpRequest.responseText);
+        var messages;
+        //alert(HttpRequest.responseText);
+        messages = HttpRequest.responseText.split("!@#");
+        //document.writeln(messages[0]);
+        //document.writeln(messages[1]);
+        document.getElementById("Messages").innerHTML = messages[0];
+        document.getElementById("userList").innerHTML = "User List <br>" + messages[1];
+        //document.getElementById
+    }
+}
+function logout(){
+    HttpRequest = getRequest();
+    HttpRequest.open("POST", url, true);
+    HttpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    var msg;
+    
+    msg = "Action=Logout";
+    HttpRequest.send(msg);
+}
+function getMessage(){
+    HttpRequest = getRequest();
+    HttpRequest.onreadystatechange = DisplayMessage;
+    HttpRequest.open("POST", url, true);
+    HttpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    var msg;
+    msg = "Action=GetMessage";
+    HttpRequest.send(msg);
+    document.getElementById("txtMessage").focus();
+}
+function login(){
+    HttpRequest = getRequest();
+    //var WshNetwork = new ActiveXObject("WScript.Network");
+    
+    HttpRequest.open("POST", url, true);
+    HttpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    var msg;
+    msg = "Action=Login&UserName=wee";// + WshNetwork.UserName;
+    HttpRequest.send(msg);
+    
+    setInterval('getMessage();', 1000);
+}
+function chkSubmit(e){
+    if(window.event){
+        var keyNumber = e.keyCode;
+        if(keyNumber == 13){
+            sendRequest();
+        }
+    }
+}
+</script>
+</head>
+<body onunload="logout();" onload="login();">
+    <form action="#" onsubmit="return false;">
+    <table>
+        <tr valign="top">
+            <td width="400"><div id="Messages" style="font-size:9pt;width:800;height:400"></div></td>
+            <td width="100" id="userList"></td>
+        </tr>
+    </table>
+    <input type="text" size="20" id="txtMessage" onkeypress="chkSubmit(event);">
+    <button onclick="sendRequest();">Say</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,409 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>Orient Overseas(http://www.oocl.com)</title>
+		<style type="text/css">
+		<!--
+		body {
+			margin-left: 0px;
+			margin-top: 0px;
+			margin-right: 0px;
+			margin-bottom: 0px;
+		}
+		-->
+		</style>
+		<link href="/zone_b2b/css/css.css" rel="stylesheet" type="text/css" />
+		<script type='text/javascript' src='/dwr/interface/AreaInfo.js'></script>
+		<link rel="stylesheet" type="text/css" href="/zone_b2b/css/oocl_css.css" />
+		<script type='text/javascript' src='/dwr/engine.js'></script>
+		<script type='text/javascript' src='/dwr/util.js'></script>
+		<script type="text/javascript" src="/js/prototype.js"></script>
+		<script type="text/javascript" src="/zone_b2b/supply/supply.js"></script>
+	</head>
+	<body>
+		<link rel="stylesheet" type="text/css" href="/zone_b2b/css/oocl_css.css" />
+<script type="text/javascript" src="/zone_b2b/js/index.js"></script>
+<link href="/zone_b2b/css/css.css" rel="stylesheet" type="text/css" />
+<table width="980" border="0" align="center" cellpadding="0" cellspacing="0"><tr><td>
+<div class="head">
+		<div class="qucik-leftlink"><a href="#" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage(top.location.href);" class="hui-link">Set as your home page</a> | <a href="javascript:window.external.AddFavorite(top.location.href)" class="hui-link">Bookmark</a> | <span id="date-time"></span></div>
+		<div class="qucik-rightlink"><a href="/index.jsp" class="hui-link">Login now</a> | <a href="#" class="hui-link">Contact us</a> | <a href="#" class="hui-link">Help</a></div>
+		<div class="dhbg" style="clear:both;">
+			<div class="logon"><a href="/"><img src="/zone_b2b/images/en/oocllogon.gif"  border="0" /></a></div>
+				<div class="inof">
+					<div class="inof_link"><a href="/zone_b2b/supply/"><img src="/zone_b2b/images/en/buy.gif"  border="0" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/zone_b2b/stock/"><img src="/zone_b2b/images/en/sell.gif"  border="0" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><img src="/zone_b2b/images/en/cv.gif"  border="0" /></a></div>
+						<div class="dh_link">
+							<ul>                                                                   
+								<!-- class="dh1"--><li class="dh1" style="width:70px;"><a href="/">Home</a></li>
+								<!-- class="dh2"--><li style="width:91px;"><a href="/zone_b2b/enterprise/">Enterprise</a></li>
+								<!-- class="dh3"--><li style="width:75px;"><a href="/zone_b2b/stock/">Buyers</a></li>
+								<!-- class="dh4"--><li style="width:88px;"><a href="/zone_b2b/supply/">Suppliers</a></li>
+								<!-- class="dh5"--><li style="width:68px;"><a href="/zone_b2b/news/">News</a></li>
+								<!-- class="dh6"--><li style="width:98px;"><a href="/index.jsp">My Account</a></li>
+							</ul>
+						</div>
+				</div>
+				<div class="inof_search">
+					<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+					  <tr>
+					    <td><table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+					      <tr>
+					        <td width="8%">&nbsp;</td>
+					        <td width="42%" class="baise">
+					          <input type="radio" name="redio_bnt" id="supply" value="radiobutton" checked />
+					          Supply
+					          <input type="radio" name="redio_bnt" id="stock" value="radiobutton"  onclick="checkR('stock')";/>
+					          Buying
+					          <input type="radio" name="redio_bnt" id="customer" value="radiobutton" onclick="checkR('customer')";/>
+					          Enterprises
+					          <input type="radio" name="redio_bnt" id="news" value="radiobutton" onclick="checkR('news')";/>
+					          Information</td>
+					        <td width="12%">&nbsp;</td>
+					        <td width="38%"align="right"class="baise"></td>
+					      </tr>
+					      <tr>
+					        <td class="baise STYLE1">Search</td>
+					        <td><input name="s_key" id="s_key" type="text" class="cs" value="enter your keywords" size="48" onmousedown="javascript:this.value=''" onblur="checkKeyWord(this.value)" /></td>
+					        <td class="baise"><input type="button" name="s_search" value="Search" onclick="checkSearchWEBValue()" /></td>
+					        <td class="baise"></td>
+					      </tr>
+					    </table></td>
+					  </tr>
+					</table>
+				</div>
+		</div>
+</div>
+</td></tr></table>
+
+		<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td height="5"></td>
+			</tr>
+			<tr>
+				<td>
+					<!-- 广告1 img src="/zone_b2b/images/ba_41.gif" width="980" height="50" alt="" />-->
+					<div id="adv-1"></div>
+				</td>
+			</tr>
+			<tr>
+				<td height="5"></td>
+			</tr>
+		</table>
+		<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td width="288" valign="top">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td width="2">
+								<img src="/zone_b2b/images/ba_105.gif" width="2" height="29" alt="">
+							</td>
+							<td align="center" background="/zone_b2b/images/ba_106.gif">
+								<table width="96%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td width="5%">
+											<img src="/zone_b2b/images/lujian.gif" width="5" height="9" />
+										</td>
+										<td width="78%" class="btlanse">
+											LatestEnterprise
+										</td>
+										<td width="17%">
+											<a href="/zone_b2b/enterprise/" class="lanse">more&gt;&gt;</a>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td width="2">
+								<img src="/zone_b2b/images/ba_109.gif" width="2" height="29" alt="">
+							</td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="9BBDD3">
+						<tr>
+							<td height="260" valign="top" bgcolor="#FFFFFF">
+								<table width="100%" border="0" cellspacing="0" cellpadding="2">
+									<tr>
+										
+										<td width="100%">
+											<li><a href="/enterpriseMgr/InterimPages.jsp?cust_id=d7T0P0m4tVf8J4T" title="you" class="news">you</a></li><li><a href="/enterpriseMgr/InterimPages.jsp?cust_id=i182T2qrqJJ751w" title="Zhongshan Dajian Plastic Manufacturer " class="news">Zhongshan Dajian Plastic Man..</a></li><li><a href="/enterpriseMgr/InterimPages.jsp?cust_id=2153s1FR46fd605" title="Ningbo Weifeng Image Equipment Group Co., Ltd. " class="news">Ningbo Weifeng Image Equipme..</a></li><li><a href="/enterpriseMgr/InterimPages.jsp?cust_id=4nwmm4q51t56n02" title="Hefei-Kun Chemical Co., Ltd." class="news">Hefei-Kun Chemical Co., Ltd...</a></li><li><a href="/enterpriseMgr/InterimPages.jsp?cust_id=61WM1I2731njch4" title="Nock to Qingdao Ltd" class="news">Nock to Qingdao Ltd..</a></li><li><a href="/enterpriseMgr/InterimPages.jsp?cust_id=3DM2A24Y1AoN5Hy" title="2123121" class="news">2123121</a></li><li><a href="/enterpriseMgr/InterimPages.jsp?cust_id=UY0760K1UkM67Ey" title="Luoyang Glass Co., Ltd. Lung Yiu" class="news">Luoyang Glass Co., Ltd. Lung..</a></li><li><a href="/enterpriseMgr/InterimPages.jsp?cust_id=6aDK7A28b7rkkI2" title="Wu Tien" class="news">Wu Tien</a></li><li><a href="/enterpriseMgr/InterimPages.jsp?cust_id=25774E6oY10bOf1" title="Future Technology Co., Ltd. Shandong" class="news">Future Technology Co., Ltd. ..</a></li><li><a href="/enterpriseMgr/InterimPages.jsp?cust_id=A4K754i8O86387x" title="Feidong, Anhui Senior glass factory" class="news">Feidong, Anhui Senior glass ..</a></li><li><a href="/enterpriseMgr/InterimPages.jsp?cust_id=8Wq00i1A0S3T2C7" title="Shandong Hongxiang Chemical Fiber Group Co" class="news">Shandong Hongxiang Chemical ..</a></li><li><a href="/enterpriseMgr/InterimPages.jsp?cust_id=vbF4Hy132Ec50pk" title="Steel Pipe Co., Ltd. in Yancheng" class="news">Steel Pipe Co., Ltd. in Yanc..</a></li>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<table width="50%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="7"></td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="9BBDD3">
+						<tr>
+							<td valign="top" bgcolor="#FFFFFF">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td height="26" background="/zone_b2b/images/btt.gif" class="btlanse">
+											&nbsp;&nbsp;filter search
+										</td>
+									</tr>
+								</table>
+								<table width="90%" border="0" align="center" cellpadding="2" cellspacing="0">
+									<tr>
+										 
+										<td>
+											key：<input name="product_name" id="product_name" type="text" class="0" style="width: 120px" value="Please enter a keyword or theme supply!" size="20" maxlength="100" onMouseDown="this.value=''" onBlur="setProductKey()">
+										</td>
+									</tr>
+									<tr>
+									 
+										<td>province：
+											<select name="prov_1" id="prov_1" onclick="setCityInfo_left(this.value)">
+												<option value="0">
+													all province information
+												</option>
+												<option value=1>北京</option><option value=3>河北</option><option value=4>山西</option><option value=5>内蒙古</option><option value=6>辽宁</option><option value=7>吉林</option><option value=8>黑龙江</option><option value=9>上海</option><option value=10>江苏</option><option value=11>浙江</option><option value=12>安徽</option><option value=13>福建</option><option value=14>江西</option><option value=15>山东</option><option value=16>河南</option><option value=17>湖北</option><option value=18>湖南</option><option value=19>广东</option><option value=20>广西</option><option value=21>海南</option><option value=22>重庆</option><option value=23>四川</option><option value=24>贵州</option><option value=25>云南</option><option value=26>西藏</option><option value=27>陕西</option><option value=28>甘肃</option><option value=29>青海</option><option value=30>宁夏</option><option value=31>新疆</option><option value=32>台湾</option><option value=33>香港</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										 
+										<td>city：
+											<select name="city_l" id="city_l" style="width: 150px">
+												 <option value="0">
+													 please choose: 
+												</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										 
+										<td>scope：
+											<select name="date">
+											   <option value="0">
+											 		please choose
+												</option>
+											   <option value="3">
+													three days
+												</option>
+												<option value="7">
+													one week
+												</option>
+												<option value="30">
+													one month
+												</option>
+												<option value="90">
+													three months
+												</option>
+												<option value="365">
+													forever
+												</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										 
+										<td>
+											<input name="radiobutton" id="search_1" type="radio" value="radiobutton" checked>
+											 faintness search
+											<input name="radiobutton" id="search_2" type="radio" value="radiobutton">
+											 Exactitude search
+										</td>
+									</tr>
+									<tr>
+										<td>&nbsp;
+											
+										</td>
+										<td>
+											<img src="/zone_b2b/images/search.gif" width="56" height="21" onClick="searchLeft()" style="cursor: hand">
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<table width="50%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="7"></td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="7">
+								<!--  img src="/zone_b2b/images/ad.jpg" width="288" height="75">-->
+								<div id="adv-2"></div>
+							</td>
+						</tr>
+					</table>
+					<table width="50%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="7"></td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td width="2">
+								<img src="/zone_b2b/images/ba_115.gif" width="2" height="29" alt="">
+							</td>
+							<td align="center" background="/zone_b2b/images/ba_116.gif">
+								<table width="96%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td width="5%">
+											<img src="/zone_b2b/images/zse.gif" width="5" height="9" />
+										</td>
+										<td width="78%" class="bthong">
+											provide in classify
+										</td>
+										<td width="17%">
+											<a href="/zone_b2b/calalogList.jsp?type=5&class_id=000000000000000" class="zhong">more&gt;&gt;</a>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td width="2">
+								<img src="/zone_b2b/images/ba_117.gif" width="2" height="29" alt="">
+							</td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="FFC367">
+						<tr>
+							<td bgcolor="#FFFFFF">
+								<table width="98%" height="10" border="0" align="center" cellpadding="0" cellspacing="0">
+									<tr>
+										<td></td>
+									</tr>
+
+								</table>
+								<table width="96%" border="0" align="center" cellpadding="2" cellspacing="0">  <tr>   <td height="30"><img src="/zone_b2b/images/d_tb.gif" width="5" height="9">	       <a href="/zone_b2b/calalogList.jsp?&supply=1&type=5&class_id=8B01TBqC4vOX260"><strong>info</strong></a>    </td>  </tr>  <tr>   <td class="xian" height="1"></td>     </tr>  <tr>    <td>     </td>  </tr> </table>    <table width="96%" border="0" align="center" cellpadding="2" cellspacing="0">  <tr>    <td height="30"><img src="/zone_b2b/images/d_tb.gif" width="5" height="9">   	 <a href="/zone_b2b/calalogList.jsp?&supply=1&type=5&class_id=15K2T540x1Fuwvq"><strong>Green Apple</strong></a>   </td> </tr>  <tr>    <td class="xian" height="1"></td>  </tr>  <tr>    <td>    </td> </tr> </table>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td valign="top">&nbsp;
+					
+				</td>
+				<td width="680" valign="top">
+					<table width="100%" border="0" cellpadding="1" cellspacing="1" bgcolor="E3E3E3">
+						<tr>
+							<td height="54" background="/zone_b2b/images/btt1.gif">
+								<table width="80%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td class="btlanse">
+											&nbsp;&nbsp;search quickly
+										</td>
+									</tr>
+
+								</table>
+								<table width="100%" border="0" cellspacing="0" cellpadding="5">
+									<tr>
+										<td>
+											<select name="prov" id="prov" onclick="setCityInfo(this.value)">
+												<option value="0">
+													province information
+												</option>
+												<option value=1>北京</option><option value=3>河北</option><option value=4>山西</option><option value=5>内蒙古</option><option value=6>辽宁</option><option value=7>吉林</option><option value=8>黑龙江</option><option value=9>上海</option><option value=10>江苏</option><option value=11>浙江</option><option value=12>安徽</option><option value=13>福建</option><option value=14>江西</option><option value=15>山东</option><option value=16>河南</option><option value=17>湖北</option><option value=18>湖南</option><option value=19>广东</option><option value=20>广西</option><option value=21>海南</option><option value=22>重庆</option><option value=23>四川</option><option value=24>贵州</option><option value=25>云南</option><option value=26>西藏</option><option value=27>陕西</option><option value=28>甘肃</option><option value=29>青海</option><option value=30>宁夏</option><option value=31>新疆</option><option value=32>台湾</option><option value=33>香港</option>
+											</select>
+										</td>
+										<td>
+											<select name="city" id="city" style="width:150px">
+												<option value="0">
+													city information
+												</option>
+											</select>
+										</td>
+										<td>
+											<select name="part" id="part">
+												<option value="0">
+													please select
+												</option>
+												<option value=8B01TBqC4vOX260>info</option><option value=15K2T540x1Fuwvq>Green Apple</option><option value=043I1PvD5f1bk71>Primary Camellia Oil</option><option value=62337OL526Fa44F>Handbag</option><option value=01BJFIvY7NFbC1k>Snowboard Jacket</option><option value=l6ym1i37U0h8b58>Beans, Grain, Nuts & Kenerls</option><option value=3D61G53i55v1Tw7>Fruit, Vegetables & Mushrooms</option><option value=37a3DwqS2323502>Ornamental Plants</option><option value=k3rkTs1661pn7Iu>Plant Seeds & Bulbs</option><option value=1OR77q6X07ibH6T>Plant Extract & Oil</option><option value=Es35wbKh3e7757V>Plant Fiber & Wood</option><option value=RM818H6buj8o81h>Cigarettes & Tobacco</option><option value=SVS7Ed0qo3w8KTS>Livestock & Animal Products</option><option value=b31a4j4k15MlGH6>Air-conditioner </option><option value=C73277880g0a4LC>Bike</option><option value=4O36ATSUx7716w0>50% Orange Juice</option>
+											</select>
+										</td>
+										<td align="right">
+											 
+										</td>
+										<td>
+											<input type="text" name="key" id="key" class="0" value="Please enter a product name or keyword" size="20" onMouseDown="javascript:this.value='';" onBlur="setTextValue()">
+										</td>
+										<td>
+											<input type="button" name="search" value="search" onClick="return searchSupply()">
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<table width="50%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="10"></td>
+						</tr>
+					</table>
+				   <style type=text/css>
+					.ec4 {
+						CURSOR: hand;
+						background:url(/zone_b2b/images/sup_03.gif);
+						COLOR: #8A0A0A;
+						font-weight:bold;
+						font-size: 13px;
+					}
+					.ec3 {CURSOR: hand; background:url(/zone_b2b/images/sup_05.gif); COLOR: #FE7C00; font-weight:bold;
+						font-size: 12px;}
+					}
+						  </style>
+					<!--HTML部分-->
+					<table border=0 cellpadding=0 cellspacing=0 width="100%">
+						<tr align=middle>
+							<td width="134" height="32" align="center" id="td0" class=ec4 onClick="javascript:secBoard(0)" style="padding-top:2;cursor: hand">
+								provide List
+							</td>
+							<td width="2" align="middle" background="/zone_b2b/images/sup_04.gif"></td>
+							<!--td width="134" height="32" align="center" id="td1" class=ec3 onClick="javascript:secBoard(1)" style="padding-top:2;cursor: hand">
+								Latest provide
+							</td-->
+							<td align="right" background="/zone_b2b/images/sup_04.gif">
+								&nbsp; &nbsp; &nbsp;
+							</td>
+						</tr>
+					</table>
+
+					<!--供应列表-->
+					<div id="sale-list">
+						<table  width=100% border=0 cellpadding=0 cellspacing=0 id=tbo0 align=top><tr>	<td>		<table width=100% border=0 cellpadding=0 cellspacing=1 bgcolor=FFC367>			<tr>				<td height=255 valign=top bgcolor=FFFFFF>					<table width=98% border=0 align=center cellpadding=0 cellspacing=0>						<tr>							<td width=23% height=30>								<img src=/zone_b2b/images/jiantou.gif width=20 height=17>															</td>							<td width=37% class=STYLE2>								Supply/Company							</td>							<td width=11% class=STYLE2>								Price($)							</td>							<td width=13% class=STYLE2>								Location							</td>							<td width=16% class=STYLE2>								Message/Contact							</td>						</tr>						<tr>							<td height=1 class=xian></td>							<td class=xian></td>							<td class=xian></td>							<td class=xian></td>							<td class=xian></td>						</tr>					</table><table width=98% border=0 align=center cellpadding=0 cellspacing=0><tr><td width=4% height=30></td><td width=19% height=130>	<img src= width=100 height=100 alt=供应LG灯的玻璃产品  border=0</td><td width=37%>	<a href=saleInquiry.jsp?sale_id=5a880Am6V4n4q7n target=_blank class=cpbt>供应LG灯的玻璃产品 </a> 	<br>	我厂生产手工玻璃工艺品及圣诞礼品,图片中的产品为LG灯的玻璃产品,有各种规格,可...</td><td width=11% align=center>	12.5</td><td width=13%>	中国 江苏 扬州市 </td><td width=16%>	<a href=saleInquiry.jsp?sale_id=5a880Am6V4n4q7n><img src=/zone_b2b/images/zx.gif border=0 width=75 height=21 alt=点击询价></a></td></tr><tr><td width=4% height=30></td><td width=19% height=130>	<img src= width=100 height=100 alt=供应玻璃瓶,饮料瓶,蜂蜜瓶,酱菜瓶等各种玻璃产品  border=0</td><td width=37%>	<a href=saleInquiry.jsp?sale_id=65ONt13Y6P6Jc11 target=_blank class=cpbt>供应玻璃瓶,饮料瓶,蜂蜜瓶,酱菜瓶等各种玻璃产品 </a> 	<br>	
+
+
+徐州宏达玻璃制瓶有限公司
+
+
+&nbsp; 　徐州宏达玻璃制瓶...</td><td width=11% align=center>	0.35</td><td width=13%>	徐州</td><td width=16%>	<a href=saleInquiry.jsp?sale_id=65ONt13Y6P6Jc11><img src=/zone_b2b/images/zx.gif border=0 width=75 height=21 alt=点击询价></a></td></tr><tr><td width=4% height=30></td><td width=19% height=130>	<img src=/usr/www/b2b.xsaas.com//upload/ltg84L433723G14/B2182cX74vDS5Ij.GIF width=100 height=100 alt=供应平弯钢化玻璃 border=0</td><td width=37%>	<a href=saleInquiry.jsp?sale_id=W2N4h4UN3M7605S target=_blank class=cpbt>供应平弯钢化玻璃</a> 	<br>	&nbsp;弯钢化玻璃是在变曲成型后，再用专用设备快速风冷制成的、此外还可以制成...</td><td width=11% align=center>	987.0</td><td width=13%>	陕西-山西</td><td width=16%>	<a href=saleInquiry.jsp?sale_id=W2N4h4UN3M7605S><img src=/zone_b2b/images/zx.gif border=0 width=75 height=21 alt=点击询价></a></td></tr><tr><td width=4% height=30></td><td width=19% height=130>	<img src=/usr/www/b2b.xsaas.com//upload/ltg84L433723G14/e4sp2K1RY5513B0.GIF width=100 height=100 alt=供应弯钢化玻璃 border=0</td><td width=37%>	<a href=saleInquiry.jsp?sale_id=Pn634SfqKu8A3aF target=_blank class=cpbt>供应弯钢化玻璃</a> 	<br>	最大规格 1200 x 2240 mm厚度范围2--6 mm弯曲深度 457 m...</td><td width=11% align=center>	545.0</td><td width=13%>	太湖-南陵</td><td width=16%>	<a href=saleInquiry.jsp?sale_id=Pn634SfqKu8A3aF><img src=/zone_b2b/images/zx.gif border=0 width=75 height=21 alt=点击询价></a></td></tr><tr><td width=4% height=30></td><td width=19% height=130>	<img src=/usr/www/b2b.xsaas.com//upload/ltg84L433723G14/6mR1LgxiDAS0415.GIF width=100 height=100 alt=供应钢化玻璃 border=0</td><td width=37%>	<a href=saleInquiry.jsp?sale_id=S77a71C0341x503 target=_blank class=cpbt>供应钢化玻璃</a> 	<br>	本公司位于江苏省苏州市，交通便利，公路，铁路，水路四通八达，公司新建于2006年...</td><td width=11% align=center>	98.0</td><td width=13%>	宁波-上海</td><td width=16%>	<a href=saleInquiry.jsp?sale_id=S77a71C0341x503><img src=/zone_b2b/images/zx.gif border=0 width=75 height=21 alt=点击询价></a></td></tr></table></td></tr></table><table width=100% border=0 cellpadding=0 cellspacing=0><tr>	<td height=10>	<input type=hidden name=s_size id=s_size value=5>	</td></tr></table><table width=100% border=0 cellpadding=1 cellspacing=1 bgcolor=E3E3E3>	<tr style=font-weight:bold;>		<td height=32 align=center background=/zone_b2b/images/btt1.gif>			<a href=/zone_b2b/supply/index.html?s=0>1</a> <a href=/zone_b2b/supply/index2.html?s=0>[2]</a> <a href=/zone_b2b/supply/index3.html?s=0>[3]</a> <a href=/zone_b2b/supply/index4.html?s=0>[4]</a> <a href=/zone_b2b/supply/index5.html?s=0>[5]</a> <a href=/zone_b2b/supply/index6.html?s=0>[6]</a> <a href=/zone_b2b/supply/index7.html?s=0>[7]</a> <a href=/zone_b2b/supply/index8.html?s=0>[8]</a> <a href=/zone_b2b/supply/index9.html?s=0>[9]</a> <a href=/zone_b2b/supply/supply_List.jsp?s=0>ALL</a>			</td>		</tr>	</table>	<table width=100% border=0 cellpadding=0 cellspacing=0>		<tr>			<td height=10></td>		</tr>	</table></td></tr></table>
+					</div>
+					<!--最新供应-->
+					<div id="sale-new-list" style="display: none">
+						<table  width=100% border=0 cellpadding=0 cellspacing=0 id=tbo0 align=top><tr>	<td>		<table width=100% border=0 cellpadding=0 cellspacing=1 bgcolor=FFC367>			<tr>				<td height=255 valign=top bgcolor=FFFFFF>					<table width=98% border=0 align=center cellpadding=0 cellspacing=0>						<tr>							<td width=23% height=30>								<img src=/zone_b2b/images/jiantou.gif width=20 height=17>															</td>							<td width=37% class=STYLE2>								Supply/Company							</td>							<td width=11% class=STYLE2>								Price($)							</td>							<td width=13% class=STYLE2>								Location							</td>							<td width=16% class=STYLE2>								Message/Contact							</td>						</tr>						<tr>							<td height=1 class=xian></td>							<td class=xian></td>							<td class=xian></td>							<td class=xian></td>							<td class=xian></td>						</tr>					</table><table width=98% border=0 align=center cellpadding=0 cellspacing=0><tr><td width=4% height=30></td><td width=19% height=130>	<img src= width=100 height=100 alt=供应LG灯的玻璃产品  border=0</td><td width=37%>	<a href=saleInquiry.jsp?sale_id=5a880Am6V4n4q7n target=_blank class=cpbt>供应LG灯的玻璃产品 </a> 	<br>	我厂生产手工玻璃工艺品及圣诞礼品,图片中的产品为LG灯的玻璃产品,有各种规格,可...</td><td width=11% align=center>	12.5</td><td width=13%>	中国 江苏 扬州市 </td><td width=16%>	<a href=saleInquiry.jsp?sale_id=5a880Am6V4n4q7n><img src=/zone_b2b/images/zx.gif border=0 width=75 height=21 alt=点击询价></a></td></tr><tr><td width=4% height=30></td><td width=19% height=130>	<img src= width=100 height=100 alt=供应玻璃瓶,饮料瓶,蜂蜜瓶,酱菜瓶等各种玻璃产品  border=0</td><td width=37%>	<a href=saleInquiry.jsp?sale_id=65ONt13Y6P6Jc11 target=_blank class=cpbt>供应玻璃瓶,饮料瓶,蜂蜜瓶,酱菜瓶等各种玻璃产品 </a> 	<br>	
+
+
+徐州宏达玻璃制瓶有限公司
+
+
+&nbsp; 　徐州宏达玻璃制瓶...</td><td width=11% align=center>	0.35</td><td width=13%>	徐州</td><td width=16%>	<a href=saleInquiry.jsp?sale_id=65ONt13Y6P6Jc11><img src=/zone_b2b/images/zx.gif border=0 width=75 height=21 alt=点击询价></a></td></tr><tr><td width=4% height=30></td><td width=19% height=130>	<img src=/usr/www/b2b.xsaas.com//upload/ltg84L433723G14/B2182cX74vDS5Ij.GIF width=100 height=100 alt=供应平弯钢化玻璃 border=0</td><td width=37%>	<a href=saleInquiry.jsp?sale_id=W2N4h4UN3M7605S target=_blank class=cpbt>供应平弯钢化玻璃</a> 	<br>	&nbsp;弯钢化玻璃是在变曲成型后，再用专用设备快速风冷制成的、此外还可以制成...</td><td width=11% align=center>	987.0</td><td width=13%>	陕西-山西</td><td width=16%>	<a href=saleInquiry.jsp?sale_id=W2N4h4UN3M7605S><img src=/zone_b2b/images/zx.gif border=0 width=75 height=21 alt=点击询价></a></td></tr><tr><td width=4% height=30></td><td width=19% height=130>	<img src=/usr/www/b2b.xsaas.com//upload/ltg84L433723G14/e4sp2K1RY5513B0.GIF width=100 height=100 alt=供应弯钢化玻璃 border=0</td><td width=37%>	<a href=saleInquiry.jsp?sale_id=Pn634SfqKu8A3aF target=_blank class=cpbt>供应弯钢化玻璃</a> 	<br>	最大规格 1200 x 2240 mm厚度范围2--6 mm弯曲深度 457 m...</td><td width=11% align=center>	545.0</td><td width=13%>	太湖-南陵</td><td width=16%>	<a href=saleInquiry.jsp?sale_id=Pn634SfqKu8A3aF><img src=/zone_b2b/images/zx.gif border=0 width=75 height=21 alt=点击询价></a></td></tr><tr><td width=4% height=30></td><td width=19% height=130>	<img src=/usr/www/b2b.xsaas.com//upload/ltg84L433723G14/6mR1LgxiDAS0415.GIF width=100 height=100 alt=供应钢化玻璃 border=0</td><td width=37%>	<a href=saleInquiry.jsp?sale_id=S77a71C0341x503 target=_blank class=cpbt>供应钢化玻璃</a> 	<br>	本公司位于江苏省苏州市，交通便利，公路，铁路，水路四通八达，公司新建于2006年...</td><td width=11% align=center>	98.0</td><td width=13%>	宁波-上海</td><td width=16%>	<a href=saleInquiry.jsp?sale_id=S77a71C0341x503><img src=/zone_b2b/images/zx.gif border=0 width=75 height=21 alt=点击询价></a></td></tr></table></td></tr></table><table width=100% border=0 cellpadding=0 cellspacing=0><tr>	<td height=10>	<input type=hidden name=n_size id=n_size value=5>	</td></tr></table><table width=100% border=0 cellpadding=1 cellspacing=1 bgcolor=E3E3E3>	<tr style=font-weight:bold;>		<td height=32 align=center background=/zone_b2b/images/btt1.gif>			<a href=/zone_b2b/supply/index.html?s=1>1</a> <a href=/zone_b2b/supply/index2.html?s=1>[2]</a> <a href=/zone_b2b/supply/index3.html?s=1>[3]</a> <a href=/zone_b2b/supply/index4.html?s=1>[4]</a> <a href=/zone_b2b/supply/index5.html?s=1>[5]</a> <a href=/zone_b2b/supply/index6.html?s=1>[6]</a> <a href=/zone_b2b/supply/index7.html?s=1>[7]</a> <a href=/zone_b2b/supply/index8.html?s=1>[8]</a> <a href=/zone_b2b/supply/index9.html?s=1>[9]</a> <a href=/zone_b2b/supply/supply_List.jsp?s=1>ALL</a>			</td>		</tr>	</table>	<table width=100% border=0 cellpadding=0 cellspacing=0>		<tr>			<td height=10></td>		</tr>	</table></td></tr></table>
+					</div>
+					<!--选项结束-->
+					<form action="supplyComparam.jsp" method="post" name="commpara" id="commpara" target="_blank">
+						<input type="hidden" name="idx" id="idx">
+					</form>
+				</td>
+			</tr>
+		</table>
+		<%@ page contentType="text/html;charset=GBK"%>
+<center>
+<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+	<tr>
+    <td valign="top" align=center>
+	   
+	      <a href="/links.jsp">Links</a> - <a href="/about.jsp">About</a> - <a href="/map.jsp">Map</a> - <a href="/contact.jsp">Contact</a> - <a href="/copyright.jsp">Copyright</a> - <a href="/job.jsp">Job</a>  <br />
+	   		 	Copyright &copy 1998-2008. Orient Overseas Container Line Limited. All rights reserved.
+ 		</td>
+  </tr>
+  </table>
+</center>
+
+	</body>
+</html>
+

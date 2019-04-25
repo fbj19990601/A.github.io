@@ -1,0 +1,333 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>{#webtitle#}</title>
+		<style type="text/css">
+		<!--
+		body {
+			margin-left: 0px;
+			margin-top: 0px;
+			margin-right: 0px;
+			margin-bottom: 0px;
+		}
+		-->
+		</style>
+		<link href="/zone_b2b/css/css.css" rel="stylesheet" type="text/css" />
+		<script type='text/javascript' src='/dwr/interface/AreaInfo.js'></script>
+		<link rel="stylesheet" type="text/css" href="/zone_b2b/css/oocl_css.css" />
+		<script type='text/javascript' src='/dwr/engine.js'></script>
+		<script type='text/javascript' src='/dwr/util.js'></script>
+		<script type="text/javascript" src="/js/prototype.js"></script>
+		<script type="text/javascript" src="/zone_b2b/supply/supply.js"></script>
+	</head>
+	<body>
+		{#include:top#}
+		<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td height="5"></td>
+			</tr>
+			<tr>
+				<td>
+					<!-- 广告1 img src="/zone_b2b/images/ba_41.gif" width="980" height="50" alt="" />-->
+					<div id="adv-1"></div>
+				</td>
+			</tr>
+			<tr>
+				<td height="5"></td>
+			</tr>
+		</table>
+		<table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td width="288" valign="top">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td width="2">
+								<img src="/zone_b2b/images/ba_105.gif" width="2" height="29" alt="">
+							</td>
+							<td align="center" background="/zone_b2b/images/ba_106.gif">
+								<table width="96%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td width="5%">
+											<img src="/zone_b2b/images/lujian.gif" width="5" height="9" />
+										</td>
+										<td width="78%" class="btlanse">
+											LatestEnterprise
+										</td>
+										<td width="17%">
+											<a href="/zone_b2b/enterprise/" class="lanse">more&gt;&gt;</a>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td width="2">
+								<img src="/zone_b2b/images/ba_109.gif" width="2" height="29" alt="">
+							</td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="9BBDD3">
+						<tr>
+							<td height="260" valign="top" bgcolor="#FFFFFF">
+								<table width="100%" border="0" cellspacing="0" cellpadding="2">
+									<tr>
+										
+										<td width="100%">
+											{#LatestEnterprise:12#}
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<table width="50%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="7"></td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="9BBDD3">
+						<tr>
+							<td valign="top" bgcolor="#FFFFFF">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td height="26" background="/zone_b2b/images/btt.gif" class="btlanse">
+											&nbsp;&nbsp;filter search
+										</td>
+									</tr>
+								</table>
+								<table width="90%" border="0" align="center" cellpadding="2" cellspacing="0">
+									<tr>
+										 
+										<td>
+											key：<input name="product_name" id="product_name" type="text" class="0" style="width: 120px" value="Please enter a keyword or theme supply!" size="20" maxlength="100" onMouseDown="this.value=''" onBlur="setProductKey()">
+										</td>
+									</tr>
+									<tr>
+									 
+										<td>province：
+											<select name="prov_1" id="prov_1" onclick="setCityInfo_left(this.value)">
+												<option value="0">
+													all province information
+												</option>
+												{#provice-1#}
+											</select>
+										</td>
+									</tr>
+									<tr>
+										 
+										<td>city：
+											<select name="city_l" id="city_l" style="width: 150px">
+												 <option value="0">
+													 please choose: 
+												</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										 
+										<td>scope：
+											<select name="date">
+											   <option value="0">
+											 		please choose
+												</option>
+											   <option value="3">
+													three days
+												</option>
+												<option value="7">
+													one week
+												</option>
+												<option value="30">
+													one month
+												</option>
+												<option value="90">
+													three months
+												</option>
+												<option value="365">
+													forever
+												</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										 
+										<td>
+											<input name="radiobutton" id="search_1" type="radio" value="radiobutton" checked>
+											 faintness search
+											<input name="radiobutton" id="search_2" type="radio" value="radiobutton">
+											 Exactitude search
+										</td>
+									</tr>
+									<tr>
+										<td>&nbsp;
+											
+										</td>
+										<td>
+											<img src="/zone_b2b/images/search.gif" width="56" height="21" onClick="searchLeft()" style="cursor: hand">
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<table width="50%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="7"></td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="7">
+								<!--  img src="/zone_b2b/images/ad.jpg" width="288" height="75">-->
+								<div id="adv-2"></div>
+							</td>
+						</tr>
+					</table>
+					<table width="50%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="7"></td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td width="2">
+								<img src="/zone_b2b/images/ba_115.gif" width="2" height="29" alt="">
+							</td>
+							<td align="center" background="/zone_b2b/images/ba_116.gif">
+								<table width="96%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td width="5%">
+											<img src="/zone_b2b/images/zse.gif" width="5" height="9" />
+										</td>
+										<td width="78%" class="bthong">
+											provide in classify
+										</td>
+										<td width="17%">
+											<a href="/zone_b2b/calalogList.jsp?type=5&class_id=000000000000000" class="zhong">more&gt;&gt;</a>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td width="2">
+								<img src="/zone_b2b/images/ba_117.gif" width="2" height="29" alt="">
+							</td>
+						</tr>
+					</table>
+					<table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="FFC367">
+						<tr>
+							<td bgcolor="#FFFFFF">
+								<table width="98%" height="10" border="0" align="center" cellpadding="0" cellspacing="0">
+									<tr>
+										<td></td>
+									</tr>
+
+								</table>
+								{#NewProducts#}
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td valign="top">&nbsp;
+					
+				</td>
+				<td width="680" valign="top">
+					<table width="100%" border="0" cellpadding="1" cellspacing="1" bgcolor="E3E3E3">
+						<tr>
+							<td height="54" background="/zone_b2b/images/btt1.gif">
+								<table width="80%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td class="btlanse">
+											&nbsp;&nbsp;search quickly
+										</td>
+									</tr>
+
+								</table>
+								<table width="100%" border="0" cellspacing="0" cellpadding="5">
+									<tr>
+										<td>
+											<select name="prov" id="prov" onclick="setCityInfo(this.value)">
+												<option value="0">
+													province information
+												</option>
+												{#provice#}
+											</select>
+										</td>
+										<td>
+											<select name="city" id="city" style="width:150px">
+												<option value="0">
+													city information
+												</option>
+											</select>
+										</td>
+										<td>
+											<select name="part" id="part">
+												<option value="0">
+													please select
+												</option>
+												{#calalog-sale#}
+											</select>
+										</td>
+										<td align="right">
+											 
+										</td>
+										<td>
+											<input type="text" name="key" id="key" class="0" value="Please enter a product name or keyword" size="20" onMouseDown="javascript:this.value='';" onBlur="setTextValue()">
+										</td>
+										<td>
+											<input type="button" name="search" value="search" onClick="return searchSupply()">
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<table width="50%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="10"></td>
+						</tr>
+					</table>
+				   <style type=text/css>
+					.ec4 {
+						CURSOR: hand;
+						background:url(/zone_b2b/images/sup_03.gif);
+						COLOR: #8A0A0A;
+						font-weight:bold;
+						font-size: 13px;
+					}
+					.ec3 {CURSOR: hand; background:url(/zone_b2b/images/sup_05.gif); COLOR: #FE7C00; font-weight:bold;
+						font-size: 12px;}
+					}
+						  </style>
+					<!--HTML部分-->
+					<table border=0 cellpadding=0 cellspacing=0 width="100%">
+						<tr align=middle>
+							<td width="134" height="32" align="center" id="td0" class=ec4 onClick="javascript:secBoard(0)" style="padding-top:2;cursor: hand">
+								provide List
+							</td>
+							<td width="2" align="middle" background="/zone_b2b/images/sup_04.gif"></td>
+							<!--td width="134" height="32" align="center" id="td1" class=ec3 onClick="javascript:secBoard(1)" style="padding-top:2;cursor: hand">
+								Latest provide
+							</td-->
+							<td align="right" background="/zone_b2b/images/sup_04.gif">
+								&nbsp; &nbsp; &nbsp;
+							</td>
+						</tr>
+					</table>
+
+					<!--供应列表-->
+					<div id="sale-list">
+						{#sale-list-5#}
+					</div>
+					<!--最新供应-->
+					<div id="sale-new-list" style="display: none">
+						{#new-sale-list-5#}
+					</div>
+					<!--选项结束-->
+					<form action="supplyComparam.jsp" method="post" name="commpara" id="commpara" target="_blank">
+						<input type="hidden" name="idx" id="idx">
+					</form>
+				</td>
+			</tr>
+		</table>
+		<center>
+		{#include:bottom#}
+		</center>
+	</body>
+</html>
